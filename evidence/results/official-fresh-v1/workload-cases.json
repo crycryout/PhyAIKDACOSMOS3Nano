@@ -1,0 +1,442 @@
+[
+  {
+    "name": "len1_3",
+    "positive_padded": 1,
+    "positive_real": 1,
+    "negative_padded": 3,
+    "negative_real": 3,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "len31_17",
+    "positive_padded": 31,
+    "positive_real": 31,
+    "negative_padded": 17,
+    "negative_real": 17,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "len63_64",
+    "positive_padded": 63,
+    "positive_real": 63,
+    "negative_padded": 64,
+    "negative_real": 64,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "len65_97",
+    "positive_padded": 65,
+    "positive_real": 65,
+    "negative_padded": 97,
+    "negative_real": 97,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "len127_13",
+    "positive_padded": 127,
+    "positive_real": 127,
+    "negative_padded": 13,
+    "negative_real": 13,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "len128_129",
+    "positive_padded": 128,
+    "positive_real": 128,
+    "negative_padded": 129,
+    "negative_real": 129,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "len257_7",
+    "positive_padded": 257,
+    "positive_real": 257,
+    "negative_padded": 7,
+    "negative_real": 7,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "padded96_real31",
+    "positive_padded": 96,
+    "positive_real": 31,
+    "negative_padded": 64,
+    "negative_real": 17,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "same_shape_changed_ids",
+    "positive_padded": 31,
+    "positive_real": 31,
+    "negative_padded": 17,
+    "negative_real": 17,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "same_shape_changed_mask",
+    "positive_padded": 96,
+    "positive_real": 47,
+    "negative_padded": 64,
+    "negative_real": 29,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "return_len31_17",
+    "positive_padded": 31,
+    "positive_real": 31,
+    "negative_padded": 17,
+    "negative_real": 17,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "len65_nondefault_stream",
+    "positive_padded": 65,
+    "positive_real": 65,
+    "negative_padded": 97,
+    "negative_real": 97,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "nondefault",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "video320x512",
+    "positive_padded": 33,
+    "positive_real": 33,
+    "negative_padded": 18,
+    "negative_real": 18,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 320,
+    "width": 512,
+    "video_shape": [
+      9,
+      20,
+      32
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "video17frames",
+    "positive_padded": 61,
+    "positive_real": 61,
+    "negative_padded": 23,
+    "negative_real": 23,
+    "same_cfg": false,
+    "frames": 17,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      5,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "action16",
+    "positive_padded": 65,
+    "positive_real": 65,
+    "negative_padded": 17,
+    "negative_real": 17,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 16,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "same_cfg_dynamic_query",
+    "positive_padded": 47,
+    "positive_real": 47,
+    "negative_padded": 47,
+    "negative_real": 47,
+    "same_cfg": true,
+    "frames": 33,
+    "height": 320,
+    "width": 512,
+    "video_shape": [
+      9,
+      20,
+      32
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "batch2_official_fallback",
+    "positive_padded": 11,
+    "positive_real": 11,
+    "negative_padded": 7,
+    "negative_real": 7,
+    "same_cfg": false,
+    "frames": 5,
+    "height": 128,
+    "width": 192,
+    "video_shape": [
+      2,
+      8,
+      12
+    ],
+    "batch": 2,
+    "action_chunk": 8,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "long512",
+    "positive_padded": 512,
+    "positive_real": 512,
+    "negative_padded": 33,
+    "negative_real": 33,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "repeat_long512_warm",
+    "positive_padded": 512,
+    "positive_real": 512,
+    "negative_padded": 33,
+    "negative_real": 33,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "conditioning_frames0_2",
+    "positive_padded": 67,
+    "positive_real": 67,
+    "negative_padded": 19,
+    "negative_real": 19,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 480,
+    "width": 832,
+    "video_shape": [
+      9,
+      30,
+      52
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "unseen_query_shape",
+    "positive_padded": 37,
+    "positive_real": 37,
+    "negative_padded": 21,
+    "negative_real": 21,
+    "same_cfg": false,
+    "frames": 17,
+    "height": 320,
+    "width": 512,
+    "video_shape": [
+      5,
+      20,
+      32
+    ],
+    "batch": 1,
+    "action_chunk": 16,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  },
+  {
+    "name": "same_length_different_cfg",
+    "positive_padded": 47,
+    "positive_real": 47,
+    "negative_padded": 47,
+    "negative_real": 47,
+    "same_cfg": false,
+    "frames": 33,
+    "height": 320,
+    "width": 512,
+    "video_shape": [
+      9,
+      20,
+      32
+    ],
+    "batch": 1,
+    "action_chunk": 32,
+    "stream": "default",
+    "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+  }
+]

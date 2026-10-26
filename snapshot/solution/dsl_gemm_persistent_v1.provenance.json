@@ -1,0 +1,6 @@
+{
+  "source": "results/installed-gemm-design-sources-v3/dense_gemm_persistent.py",
+  "sha256": "d59344faf902cb215a2cee3f2ae6415a14589c6ad8f93e5e74e2612c1e6a0810",
+  "mode": "unmodified actual installed CUTLASS example",
+  "claim": "SM100 reference; SM110 execution/quality/performance unverified until screen"
+}

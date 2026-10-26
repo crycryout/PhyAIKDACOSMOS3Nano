@@ -1,0 +1,153 @@
+{
+  "complete": true,
+  "gate_passed": true,
+  "oracle": "original official CUDA Graph before any candidate installation",
+  "rows": [
+    {
+      "mode": "original_graph",
+      "case": "graph_len11_7",
+      "positive_length": 11,
+      "negative_length": 7,
+      "byte_equal": true,
+      "action_sha256": "3f3644299b4391e1b36dd26362d926fb6c3901ec07359337eba7cef55704e3e1",
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "graphs_after_request": {
+        "cond": {
+          "captures": 1,
+          "replays": 4,
+          "graph_live": true
+        },
+        "uncond": {
+          "captures": 1,
+          "replays": 4,
+          "graph_live": true
+        }
+      },
+      "optimization": null
+    },
+    {
+      "mode": "original_graph",
+      "case": "graph_len33_19",
+      "positive_length": 33,
+      "negative_length": 19,
+      "byte_equal": true,
+      "action_sha256": "1eda0d797fe7300107deb4bb6726d8cc9f104239e52dca472a06ba3d8f34368d",
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "graphs_after_request": {
+        "cond": {
+          "captures": 2,
+          "replays": 8,
+          "graph_live": true
+        },
+        "uncond": {
+          "captures": 2,
+          "replays": 8,
+          "graph_live": true
+        }
+      },
+      "optimization": null
+    },
+    {
+      "mode": "candidate_official_graph_fallback",
+      "case": "graph_len11_7",
+      "positive_length": 11,
+      "negative_length": 7,
+      "byte_equal": true,
+      "action_sha256": "3f3644299b4391e1b36dd26362d926fb6c3901ec07359337eba7cef55704e3e1",
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "graphs_after_request": {},
+      "optimization": {
+        "dynamic": {
+          "route": "official",
+          "reason": "official_cuda_graph"
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      }
+    },
+    {
+      "mode": "candidate_official_graph_fallback",
+      "case": "graph_len33_19",
+      "positive_length": 33,
+      "negative_length": 19,
+      "byte_equal": true,
+      "action_sha256": "1eda0d797fe7300107deb4bb6726d8cc9f104239e52dca472a06ba3d8f34368d",
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "graphs_after_request": {},
+      "optimization": {
+        "dynamic": {
+          "route": "official",
+          "reason": "official_cuda_graph"
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      }
+    }
+  ]
+}

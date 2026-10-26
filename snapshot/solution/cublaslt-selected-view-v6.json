@@ -1,0 +1,83 @@
+{
+  "status": "screen_selected_not_promoted",
+  "baseline": "candidate-v11 + attention-v12",
+  "configurations": {
+    "cross_attention_qkv_proj": {
+      "attrs": {
+        "0": 66,
+        "1": 513,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 35,
+        "7": 0,
+        "8": 5
+      },
+      "b_row": 0,
+      "swapped": 1,
+      "screen_ratio": 0.8189346926005746,
+      "candidate_median_ms": 1.1202239990234375,
+      "frozen_median_ms": 1.3679039478302002,
+      "evidence_sha256": "ae8420d5099eeaf703a94a900616290a0f5a25d41d9a9b03f12d114b3e513ff8"
+    },
+    "cross_attention_to_out": {
+      "attrs": {
+        "0": 66,
+        "1": 506,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 35,
+        "7": 0,
+        "8": 5
+      },
+      "b_row": 1,
+      "swapped": 1,
+      "screen_ratio": 0.8023875748947639,
+      "candidate_median_ms": 0.703328013420105,
+      "frozen_median_ms": 0.8765439987182617,
+      "evidence_sha256": "ae8420d5099eeaf703a94a900616290a0f5a25d41d9a9b03f12d114b3e513ff8"
+    },
+    "mlp_down_proj": {
+      "attrs": {
+        "0": 66,
+        "1": 29,
+        "2": 1,
+        "3": 0,
+        "4": 1,
+        "5": 1,
+        "6": 35,
+        "7": 0,
+        "8": 6
+      },
+      "b_row": 0,
+      "swapped": 0,
+      "screen_ratio": 0.8165561422351602,
+      "candidate_median_ms": 2.766047954559326,
+      "frozen_median_ms": 3.387455940246582,
+      "evidence_sha256": "ae8420d5099eeaf703a94a900616290a0f5a25d41d9a9b03f12d114b3e513ff8"
+    },
+    "mlp_gate_up_proj": {
+      "attrs": {
+        "0": 66,
+        "1": 506,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 3,
+        "6": 35,
+        "7": 0,
+        "8": 6
+      },
+      "b_row": 0,
+      "swapped": 0,
+      "screen_ratio": 0.9003105652319012,
+      "candidate_median_ms": 4.861216068267822,
+      "frozen_median_ms": 5.3994879722595215,
+      "evidence_sha256": "ae8420d5099eeaf703a94a900616290a0f5a25d41d9a9b03f12d114b3e513ff8"
+    }
+  },
+  "source_sha256": "ae8420d5099eeaf703a94a900616290a0f5a25d41d9a9b03f12d114b3e513ff8"
+}

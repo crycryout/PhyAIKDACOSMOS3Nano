@@ -1,0 +1,32 @@
+{
+  "parent_candidate": "solution/candidate-full-port-v3.py",
+  "parent_manifest": "solution/dynamic-lt-selected-v3.json",
+  "parent_main_windows_pct": [
+    30.068914499511223,
+    28.77735237551297
+  ],
+  "new_variable": "For M3542 and full distinct-CFG computation, compare inherited fixed Lt, direct original torch.mm, and newly byte-gated Lt tactics. Keep M1472 and all other dynamic handling inherited.",
+  "hypothesis": "The adopted M3542 Lt selection came from a different static/CSE execution context; physical full-CFG kernel count and sustained device state differ. Re-screen complete requests before selecting a route.",
+  "unchanged": [
+    "Independent official oracle",
+    "BF16 exact action bytes",
+    "Cold UND counts 2",
+    "Full online VAE and 8 GEN",
+    "Identical pixels/tokens/seed/config for both variants",
+    "GPU clock/power untouched",
+    "All previous records kept"
+  ],
+  "files": [
+    "solution/main_gemm_routes_v2.py",
+    "bench/screen_main_dynamic_lt_v2.py",
+    "bench/screen_main_routes_e2e_v2.py"
+  ],
+  "screen_gate": "Warmup and every measured request: official action bytes, complete phase counts, expected 288 new dispatches per selected GEN category. Isolated tactics are screening only.",
+  "promotion_gate": "Complete dynamic 25-case gate, nondefault streams and original fallback; replicated full-E2E improvement versus frozen V3 physical route; new independent official/final paired E2E windows before declaring >=30%.",
+  "rejections_preserved": [
+    "V1 M1982/M3526 bundle regressions",
+    "V2 M1982 QKV nonreplication",
+    "V3 main window1 below30%"
+  ],
+  "current_state": "CPU preparation complete; GPU experiments follow the six-stage frozen V3 serial queue"
+}

@@ -1,0 +1,129 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "q": 1,
+      "kv": 1,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 1
+    },
+    {
+      "q": 31,
+      "kv": 17,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 2
+    },
+    {
+      "q": 63,
+      "kv": 64,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 3
+    },
+    {
+      "q": 64,
+      "kv": 65,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 4
+    },
+    {
+      "q": 65,
+      "kv": 129,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 4
+    },
+    {
+      "q": 127,
+      "kv": 191,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 4
+    },
+    {
+      "q": 128,
+      "kv": 257,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 4
+    },
+    {
+      "q": 129,
+      "kv": 513,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 4
+    },
+    {
+      "q": 257,
+      "kv": 319,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 4
+    },
+    {
+      "q": 3542,
+      "kv": 3543,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 4
+    },
+    {
+      "q": 3542,
+      "kv": 3573,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 4
+    },
+    {
+      "q": 1472,
+      "kv": 1505,
+      "byte_equal": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "plan_entries": 4
+    }
+  ],
+  "fallbacks": [
+    {
+      "case": "custom_mask",
+      "called_original_official": true
+    },
+    {
+      "case": "batch2",
+      "called_original_official": true
+    },
+    {
+      "case": "dtype",
+      "called_original_official": true
+    },
+    {
+      "case": "nonunit_dim_stride",
+      "called_original_official": true
+    }
+  ],
+  "max_plans": 4,
+  "cache_stats": {
+    "plan_misses": 12,
+    "evictions": 8,
+    "fallback:attention_context": 1,
+    "fallback:batch": 1,
+    "fallback:device_or_dtype": 1,
+    "fallback:layout": 1
+  },
+  "final_entries": 4
+}

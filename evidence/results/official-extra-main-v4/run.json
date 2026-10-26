@@ -1,0 +1,2246 @@
+{
+  "command": [
+    "timeout",
+    "900",
+    "/bin/bash",
+    "bench/run_dynamic_v3.sh",
+    "validate_extra_main_paths_v4.py",
+    "--backend",
+    "official",
+    "--out",
+    "$TASK_ROOT/results/official-extra-main-v4"
+  ],
+  "cwd": "$TASK_ROOT",
+  "environment": {
+    "TMPDIR": "$TASK_ROOT/tmp",
+    "XDG_CACHE_HOME": "$TASK_ROOT/cache",
+    "XDG_CONFIG_HOME": "$TASK_ROOT/config",
+    "HF_HOME": "$TASK_ROOT/cache/huggingface",
+    "TORCH_EXTENSIONS_DIR": "$TASK_ROOT/build/torch_extensions",
+    "TRITON_CACHE_DIR": "$TASK_ROOT/cache/triton",
+    "CUDA_CACHE_PATH": "$TASK_ROOT/cache/cuda",
+    "CUTE_DSL_CACHE_DIR": "$TASK_ROOT/cache/cute-dsl",
+    "CUTE_DSL_DUMP_DIR": "$TASK_ROOT/results/cute-dsl-dump",
+    "UV_CACHE_DIR": "$TASK_ROOT/cache/uv",
+    "PIP_CACHE_DIR": "$TASK_ROOT/cache/pip",
+    "CUDA_HOME": "/usr/local/cuda-13.0",
+    "CUTE_DSL_ARCH": "sm_110a",
+    "KDA_THOR_ROOT": "$TASK_ROOT",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "NV_COMPUTE_PROFILER_DISABLE_STOCK_FILE_DEPLOYMENT": "1",
+    "THOR_WORKFLOW_TRACE_ID": "wf-20261023T191907391908Z-63abb6795e",
+    "THOR_WORKFLOW_EVENT_ID": "evt-20261023T220013068702Z-dcc8d7afa6"
+  },
+  "before": {
+    "utc": "2026-10-23T22:00:15.351870+00:00",
+    "hostname": "haruhikage",
+    "architecture": "aarch64",
+    "gpu": {
+      "argv": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,compute_cap",
+        "--format=csv,noheader"
+      ],
+      "returncode": 0,
+      "stdout": "NVIDIA Thor, 580.00, 11.0",
+      "stderr": ""
+    },
+    "gpu_processes": {
+      "argv": [
+        "nvidia-smi",
+        "--query-compute-apps=pid,process_name,used_memory",
+        "--format=csv,noheader"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "meminfo_kib": {
+      "MemTotal": 128790148,
+      "MemFree": 10013684,
+      "MemAvailable": 73340744,
+      "Buffers": 861568,
+      "Cached": 62622424,
+      "SwapCached": 0,
+      "Active": 46045004,
+      "Inactive": 19252852,
+      "Active(anon)": 2812,
+      "Inactive(anon)": 1843932,
+      "Active(file)": 46042192,
+      "Inactive(file)": 17408920,
+      "Unevictable": 27368,
+      "Mlocked": 0,
+      "SwapTotal": 0,
+      "SwapFree": 0,
+      "Dirty": 264,
+      "Writeback": 0,
+      "AnonPages": 1824796,
+      "Mapped": 187048,
+      "Shmem": 5540,
+      "KReclaimable": 1083912,
+      "Slab": 1368336,
+      "SReclaimable": 1083912,
+      "SUnreclaim": 284424,
+      "KernelStack": 15388,
+      "PageTables": 24232,
+      "SecPageTables": 0,
+      "NFS_Unstable": 0,
+      "Bounce": 0,
+      "WritebackTmp": 0,
+      "CommitLimit": 64395072,
+      "Committed_AS": 4940484,
+      "VmallocTotal": 133141626880,
+      "VmallocUsed": 100604,
+      "VmallocChunk": 0,
+      "Percpu": 12656,
+      "HardwareCorrupted": 0,
+      "AnonHugePages": 1337344,
+      "ShmemHugePages": 0,
+      "ShmemPmdMapped": 0,
+      "FileHugePages": 0,
+      "FilePmdMapped": 0,
+      "CmaTotal": 524288,
+      "CmaFree": 4248,
+      "Hugepagesize": 2048,
+      "Hugetlb": 0
+    },
+    "clocks_hz": {
+      "gpu": "0",
+      "emc": "665600000"
+    }
+  },
+  "profile": "none",
+  "cpu_only": false,
+  "telemetry": [
+    {
+      "utc": "2026-10-23T22:00:17.748285+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, $THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/bin/python, 102 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 9563340,
+        "MemAvailable": 72890996,
+        "Buffers": 861568,
+        "Cached": 62694896,
+        "SwapCached": 0,
+        "Active": 46045816,
+        "Inactive": 19656600,
+        "Active(anon)": 2808,
+        "Inactive(anon)": 2247900,
+        "Active(file)": 46043008,
+        "Inactive(file)": 17408700,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 1080,
+        "Writeback": 0,
+        "AnonPages": 2156544,
+        "Mapped": 553128,
+        "Shmem": 77416,
+        "KReclaimable": 1083912,
+        "Slab": 1370588,
+        "SReclaimable": 1083912,
+        "SUnreclaim": 286676,
+        "KernelStack": 15472,
+        "PageTables": 26336,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 6394380,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 103424,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1439744,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 4252,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "315000000",
+        "emc": "2750000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:19.906069+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, $THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/bin/python, 202 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 9471820,
+        "MemAvailable": 72799588,
+        "Buffers": 861580,
+        "Cached": 62694884,
+        "SwapCached": 0,
+        "Active": 46045816,
+        "Inactive": 19761020,
+        "Active(anon)": 2808,
+        "Inactive(anon)": 2352320,
+        "Active(file)": 46043008,
+        "Inactive(file)": 17408700,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 1072,
+        "Writeback": 0,
+        "AnonPages": 2260964,
+        "Mapped": 562680,
+        "Shmem": 77416,
+        "KReclaimable": 1084024,
+        "Slab": 1370776,
+        "SReclaimable": 1084024,
+        "SUnreclaim": 286752,
+        "KernelStack": 15488,
+        "PageTables": 26792,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 6512832,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 103476,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1458176,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 4252,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "315000000",
+        "emc": "2750000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:22.079249+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 27966 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 6633196,
+        "MemAvailable": 69961608,
+        "Buffers": 861580,
+        "Cached": 62697604,
+        "SwapCached": 0,
+        "Active": 47091320,
+        "Inactive": 21198520,
+        "Active(anon)": 1047716,
+        "Inactive(anon)": 3789772,
+        "Active(file)": 46043604,
+        "Inactive(file)": 17408748,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 208,
+        "Writeback": 0,
+        "AnonPages": 4741268,
+        "Mapped": 587276,
+        "Shmem": 79468,
+        "KReclaimable": 1084024,
+        "Slab": 1576528,
+        "SReclaimable": 1084024,
+        "SUnreclaim": 492504,
+        "KernelStack": 15520,
+        "PageTables": 31872,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 11768748,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 239024,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1691648,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 4252,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "3200000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:24.249556+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 27966 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 9339388,
+        "MemAvailable": 71946496,
+        "Buffers": 853744,
+        "Cached": 61923128,
+        "SwapCached": 0,
+        "Active": 46091580,
+        "Inactive": 19586008,
+        "Active(anon)": 127884,
+        "Inactive(anon)": 2879640,
+        "Active(file)": 45963696,
+        "Inactive(file)": 16706368,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 208,
+        "Writeback": 0,
+        "AnonPages": 2911644,
+        "Mapped": 586784,
+        "Shmem": 79468,
+        "KReclaimable": 1083568,
+        "Slab": 1576072,
+        "SReclaimable": 1083568,
+        "SUnreclaim": 492504,
+        "KernelStack": 15520,
+        "PageTables": 28324,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 11864072,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 239040,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1691648,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 5092,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "3200000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:26.385385+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 27966 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 6089300,
+        "MemAvailable": 68698572,
+        "Buffers": 853752,
+        "Cached": 61925148,
+        "SwapCached": 0,
+        "Active": 47584228,
+        "Inactive": 21308192,
+        "Active(anon)": 1618512,
+        "Inactive(anon)": 4601824,
+        "Active(file)": 45965716,
+        "Inactive(file)": 16706368,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 308,
+        "Writeback": 0,
+        "AnonPages": 6124108,
+        "Mapped": 586784,
+        "Shmem": 79468,
+        "KReclaimable": 1083712,
+        "Slab": 1576216,
+        "SReclaimable": 1083712,
+        "SUnreclaim": 492504,
+        "KernelStack": 15520,
+        "PageTables": 34520,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 11864080,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 239056,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1691648,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 5108,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "3200000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:28.550236+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 27966 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8203368,
+        "MemAvailable": 70644088,
+        "Buffers": 851892,
+        "Cached": 61759060,
+        "SwapCached": 0,
+        "Active": 45834792,
+        "Inactive": 20930756,
+        "Active(anon)": 216408,
+        "Inactive(anon)": 4045052,
+        "Active(file)": 45618384,
+        "Inactive(file)": 16885704,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 308,
+        "Writeback": 0,
+        "AnonPages": 4165220,
+        "Mapped": 586664,
+        "Shmem": 79468,
+        "KReclaimable": 1083156,
+        "Slab": 1575656,
+        "SReclaimable": 1083156,
+        "SUnreclaim": 492500,
+        "KernelStack": 15504,
+        "PageTables": 30824,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 11782108,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 239072,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1691648,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 104,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "3200000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:30.687079+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 27966 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 5352868,
+        "MemAvailable": 67777244,
+        "Buffers": 851736,
+        "Cached": 61742840,
+        "SwapCached": 0,
+        "Active": 47464688,
+        "Inactive": 21409336,
+        "Active(anon)": 1880308,
+        "Inactive(anon)": 4506260,
+        "Active(file)": 45584380,
+        "Inactive(file)": 16903076,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 308,
+        "Writeback": 0,
+        "AnonPages": 6281824,
+        "Mapped": 586664,
+        "Shmem": 79468,
+        "KReclaimable": 1083444,
+        "Slab": 1575940,
+        "SReclaimable": 1083444,
+        "SUnreclaim": 492496,
+        "KernelStack": 15488,
+        "PageTables": 37364,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 16646348,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 239020,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1691648,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 3916,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1377000000",
+        "emc": "3200000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:32.824743+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 27966 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 6739488,
+        "MemAvailable": 69389428,
+        "Buffers": 851744,
+        "Cached": 61967812,
+        "SwapCached": 0,
+        "Active": 46827304,
+        "Inactive": 21379088,
+        "Active(anon)": 1018188,
+        "Inactive(anon)": 4475168,
+        "Active(file)": 45809116,
+        "Inactive(file)": 16903920,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 36,
+        "Writeback": 84,
+        "AnonPages": 5397104,
+        "Mapped": 586620,
+        "Shmem": 79468,
+        "KReclaimable": 1083428,
+        "Slab": 1575924,
+        "SReclaimable": 1083428,
+        "SUnreclaim": 492496,
+        "KernelStack": 15488,
+        "PageTables": 33180,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 11829244,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 239020,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1691648,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2284,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "3200000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:34.990345+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 27966 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 9032616,
+        "MemAvailable": 71490908,
+        "Buffers": 848828,
+        "Cached": 61780196,
+        "SwapCached": 0,
+        "Active": 45384440,
+        "Inactive": 20516496,
+        "Active(anon)": 67756,
+        "Inactive(anon)": 3311000,
+        "Active(file)": 45316684,
+        "Inactive(file)": 17205496,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 36,
+        "Writeback": 0,
+        "AnonPages": 3282864,
+        "Mapped": 586148,
+        "Shmem": 79468,
+        "KReclaimable": 1082636,
+        "Slab": 1575128,
+        "SReclaimable": 1082636,
+        "SUnreclaim": 492492,
+        "KernelStack": 15488,
+        "PageTables": 29140,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 11796448,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 239056,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1691648,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 1568,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1305000000",
+        "emc": "2750000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:37.123584+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 27966 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 5967260,
+        "MemAvailable": 68639556,
+        "Buffers": 848828,
+        "Cached": 61993860,
+        "SwapCached": 0,
+        "Active": 47051124,
+        "Inactive": 21953048,
+        "Active(anon)": 1520744,
+        "Inactive(anon)": 4747548,
+        "Active(file)": 45530380,
+        "Inactive(file)": 17205500,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 168,
+        "Writeback": 0,
+        "AnonPages": 6172400,
+        "Mapped": 586148,
+        "Shmem": 79468,
+        "KReclaimable": 1082940,
+        "Slab": 1575432,
+        "SReclaimable": 1082940,
+        "SUnreclaim": 492492,
+        "KernelStack": 15488,
+        "PageTables": 34760,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 11796452,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 239056,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1691648,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 1568,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "3200000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:39.281639+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 27966 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 7730744,
+        "MemAvailable": 70250616,
+        "Buffers": 846336,
+        "Cached": 61844632,
+        "SwapCached": 0,
+        "Active": 45614272,
+        "Inactive": 21621404,
+        "Active(anon)": 513840,
+        "Inactive(anon)": 4137684,
+        "Active(file)": 45100432,
+        "Inactive(file)": 17483720,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 180,
+        "Writeback": 0,
+        "AnonPages": 4555260,
+        "Mapped": 585768,
+        "Shmem": 79468,
+        "KReclaimable": 1082244,
+        "Slab": 1574732,
+        "SReclaimable": 1082244,
+        "SUnreclaim": 492488,
+        "KernelStack": 15488,
+        "PageTables": 31356,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 11124728,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 239020,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1691648,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 4456,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "4266000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:41.416389+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 29322 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8387008,
+        "MemAvailable": 70914428,
+        "Buffers": 846336,
+        "Cached": 61851916,
+        "SwapCached": 0,
+        "Active": 45226980,
+        "Inactive": 20364176,
+        "Active(anon)": 120024,
+        "Inactive(anon)": 2879688,
+        "Active(file)": 45106956,
+        "Inactive(file)": 17484488,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 52,
+        "Writeback": 0,
+        "AnonPages": 2903468,
+        "Mapped": 586056,
+        "Shmem": 79468,
+        "KReclaimable": 1082500,
+        "Slab": 1592748,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 510248,
+        "KernelStack": 15488,
+        "PageTables": 28404,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 8340620,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 239072,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 1691648,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 4456,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "4266000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:43.560761+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31575 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8316256,
+        "MemAvailable": 70846832,
+        "Buffers": 846336,
+        "Cached": 61857164,
+        "SwapCached": 0,
+        "Active": 45117604,
+        "Inactive": 20808516,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3328708,
+        "Active(file)": 45114792,
+        "Inactive(file)": 17479808,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 28,
+        "Writeback": 48,
+        "AnonPages": 3233192,
+        "Mapped": 674504,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1609836,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 527336,
+        "KernelStack": 15488,
+        "PageTables": 29556,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 7608656,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251064,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2031616,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "3200000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:45.709052+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31579 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8206892,
+        "MemAvailable": 70738688,
+        "Buffers": 846336,
+        "Cached": 61858340,
+        "SwapCached": 0,
+        "Active": 45119532,
+        "Inactive": 21055380,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3576280,
+        "Active(file)": 45116720,
+        "Inactive(file)": 17479100,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 156,
+        "Writeback": 0,
+        "AnonPages": 3479452,
+        "Mapped": 754880,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1609932,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 527432,
+        "KernelStack": 15472,
+        "PageTables": 30296,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 7861652,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251064,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2152448,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1071000000",
+        "emc": "3200000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:47.855029+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31613 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8164992,
+        "MemAvailable": 70698900,
+        "Buffers": 846344,
+        "Cached": 61860444,
+        "SwapCached": 0,
+        "Active": 45121944,
+        "Inactive": 21165304,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3686504,
+        "Active(file)": 45119132,
+        "Inactive(file)": 17478800,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 196,
+        "Writeback": 0,
+        "AnonPages": 3589672,
+        "Mapped": 840668,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1610764,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 528264,
+        "KernelStack": 15488,
+        "PageTables": 30784,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 7985576,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251080,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2174976,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "4266000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:50.011419+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31613 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8190780,
+        "MemAvailable": 70724704,
+        "Buffers": 846344,
+        "Cached": 61860460,
+        "SwapCached": 0,
+        "Active": 45121960,
+        "Inactive": 21171428,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3692628,
+        "Active(file)": 45119148,
+        "Inactive(file)": 17478800,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 196,
+        "Writeback": 0,
+        "AnonPages": 3595764,
+        "Mapped": 841388,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1610764,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 528264,
+        "KernelStack": 15488,
+        "PageTables": 30800,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 7991528,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251080,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2177024,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "4266000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:52.174846+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31709 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8201864,
+        "MemAvailable": 70735788,
+        "Buffers": 846352,
+        "Cached": 61860460,
+        "SwapCached": 0,
+        "Active": 45121960,
+        "Inactive": 21204336,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3725536,
+        "Active(file)": 45119148,
+        "Inactive(file)": 17478800,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 32,
+        "Writeback": 0,
+        "AnonPages": 3628660,
+        "Mapped": 846856,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1611532,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 529032,
+        "KernelStack": 15488,
+        "PageTables": 30800,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 8039628,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251444,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2183168,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "4266000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:54.338508+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31709 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8159380,
+        "MemAvailable": 70693316,
+        "Buffers": 846352,
+        "Cached": 61860464,
+        "SwapCached": 0,
+        "Active": 45121968,
+        "Inactive": 21258308,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3779504,
+        "Active(file)": 45119156,
+        "Inactive(file)": 17478804,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 40,
+        "Writeback": 4,
+        "AnonPages": 3682636,
+        "Mapped": 849316,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1611564,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 529064,
+        "KernelStack": 15504,
+        "PageTables": 31076,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 8106416,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251492,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2215936,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "4266000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:56.490658+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31735 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8185908,
+        "MemAvailable": 70719844,
+        "Buffers": 846360,
+        "Cached": 61860464,
+        "SwapCached": 0,
+        "Active": 45121968,
+        "Inactive": 21266588,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3787784,
+        "Active(file)": 45119156,
+        "Inactive(file)": 17478804,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 228,
+        "Writeback": 0,
+        "AnonPages": 3689312,
+        "Mapped": 849316,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1612200,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 529700,
+        "KernelStack": 15536,
+        "PageTables": 31088,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 8114368,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251444,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2217984,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "4266000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:00:58.647348+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31735 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8176444,
+        "MemAvailable": 70710388,
+        "Buffers": 846360,
+        "Cached": 61860464,
+        "SwapCached": 0,
+        "Active": 45121976,
+        "Inactive": 21266596,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3787792,
+        "Active(file)": 45119164,
+        "Inactive(file)": 17478804,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 140,
+        "Writeback": 8,
+        "AnonPages": 3689328,
+        "Mapped": 849316,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1612232,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 529732,
+        "KernelStack": 15504,
+        "PageTables": 31088,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 8114372,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251444,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2217984,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "4266000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:01:00.806114+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31735 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8175384,
+        "MemAvailable": 70709328,
+        "Buffers": 846360,
+        "Cached": 61860464,
+        "SwapCached": 0,
+        "Active": 45121976,
+        "Inactive": 21266596,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3787792,
+        "Active(file)": 45119164,
+        "Inactive(file)": 17478804,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 0,
+        "Writeback": 0,
+        "AnonPages": 3689340,
+        "Mapped": 849316,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1612232,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 529732,
+        "KernelStack": 15504,
+        "PageTables": 31088,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 8114372,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251444,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2217984,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "1386000000",
+        "emc": "4266000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:01:02.969313+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31735 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8188172,
+        "MemAvailable": 70733672,
+        "Buffers": 846360,
+        "Cached": 61871704,
+        "SwapCached": 0,
+        "Active": 45140564,
+        "Inactive": 21274988,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3803216,
+        "Active(file)": 45137752,
+        "Inactive(file)": 17471772,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 12,
+        "Writeback": 0,
+        "AnonPages": 3704780,
+        "Mapped": 849316,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1612232,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 529732,
+        "KernelStack": 15520,
+        "PageTables": 31120,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 8146168,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251444,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2230272,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "945000000",
+        "emc": "4266000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    },
+    {
+      "utc": "2026-10-23T22:01:05.112260+00:00",
+      "hostname": "haruhikage",
+      "architecture": "aarch64",
+      "gpu": {
+        "argv": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "NVIDIA Thor, 580.00, 11.0",
+        "stderr": ""
+      },
+      "gpu_processes": {
+        "argv": [
+          "nvidia-smi",
+          "--query-compute-apps=pid,process_name,used_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "1775448, phyai::cosmos3_policy, 31735 MiB",
+        "stderr": ""
+      },
+      "meminfo_kib": {
+        "MemTotal": 128790148,
+        "MemFree": 8185588,
+        "MemAvailable": 70746012,
+        "Buffers": 846368,
+        "Cached": 61886952,
+        "SwapCached": 0,
+        "Active": 45182584,
+        "Inactive": 21241492,
+        "Active(anon)": 2812,
+        "Inactive(anon)": 3796816,
+        "Active(file)": 45179772,
+        "Inactive(file)": 17444676,
+        "Unevictable": 27368,
+        "Mlocked": 0,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "Dirty": 52,
+        "Writeback": 0,
+        "AnonPages": 3698380,
+        "Mapped": 849316,
+        "Shmem": 81516,
+        "KReclaimable": 1082500,
+        "Slab": 1612232,
+        "SReclaimable": 1082500,
+        "SUnreclaim": 529732,
+        "KernelStack": 15520,
+        "PageTables": 31108,
+        "SecPageTables": 0,
+        "NFS_Unstable": 0,
+        "Bounce": 0,
+        "WritebackTmp": 0,
+        "CommitLimit": 64395072,
+        "Committed_AS": 8139564,
+        "VmallocTotal": 133141626880,
+        "VmallocUsed": 251444,
+        "VmallocChunk": 0,
+        "Percpu": 12656,
+        "HardwareCorrupted": 0,
+        "AnonHugePages": 2224128,
+        "ShmemHugePages": 0,
+        "ShmemPmdMapped": 0,
+        "FileHugePages": 0,
+        "FilePmdMapped": 0,
+        "CmaTotal": 524288,
+        "CmaFree": 2372,
+        "Hugepagesize": 2048,
+        "Hugetlb": 0
+      },
+      "clocks_hz": {
+        "gpu": "315000000",
+        "emc": "2750000000"
+      },
+      "owned_pids_before_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "owned_pids_after_snapshot": [
+        1775441,
+        1775447,
+        1775448
+      ],
+      "foreign_gpu_pids": []
+    }
+  ],
+  "returncode": 0,
+  "workflow_trace_id": "wf-20261023T191907391908Z-63abb6795e",
+  "workflow_trace_file": "$TASK_ROOT/results/workflow-trace.jsonl",
+  "workflow_event_id": "evt-20261023T220013068702Z-dcc8d7afa6",
+  "after": {
+    "utc": "2026-10-23T22:01:07.159888+00:00",
+    "hostname": "haruhikage",
+    "architecture": "aarch64",
+    "gpu": {
+      "argv": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,compute_cap",
+        "--format=csv,noheader"
+      ],
+      "returncode": 0,
+      "stdout": "NVIDIA Thor, 580.00, 11.0",
+      "stderr": ""
+    },
+    "gpu_processes": {
+      "argv": [
+        "nvidia-smi",
+        "--query-compute-apps=pid,process_name,used_memory",
+        "--format=csv,noheader"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "meminfo_kib": {
+      "MemTotal": 128790148,
+      "MemFree": 10544332,
+      "MemAvailable": 73105028,
+      "Buffers": 846368,
+      "Cached": 61811412,
+      "SwapCached": 0,
+      "Active": 45183008,
+      "Inactive": 19284332,
+      "Active(anon)": 2812,
+      "Inactive(anon)": 1839776,
+      "Active(file)": 45180196,
+      "Inactive(file)": 17444556,
+      "Unevictable": 27368,
+      "Mlocked": 0,
+      "SwapTotal": 0,
+      "SwapFree": 0,
+      "Dirty": 180,
+      "Writeback": 4,
+      "AnonPages": 1820072,
+      "Mapped": 186908,
+      "Shmem": 5688,
+      "KReclaimable": 1082468,
+      "Slab": 1365264,
+      "SReclaimable": 1082468,
+      "SUnreclaim": 282796,
+      "KernelStack": 15296,
+      "PageTables": 24168,
+      "SecPageTables": 0,
+      "NFS_Unstable": 0,
+      "Bounce": 0,
+      "WritebackTmp": 0,
+      "CommitLimit": 64395072,
+      "Committed_AS": 4953168,
+      "VmallocTotal": 133141626880,
+      "VmallocUsed": 97648,
+      "VmallocChunk": 0,
+      "Percpu": 12656,
+      "HardwareCorrupted": 0,
+      "AnonHugePages": 1339392,
+      "ShmemHugePages": 0,
+      "ShmemPmdMapped": 0,
+      "FileHugePages": 0,
+      "FilePmdMapped": 0,
+      "CmaTotal": 524288,
+      "CmaFree": 2372,
+      "Hugepagesize": 2048,
+      "Hugetlb": 0
+    },
+    "clocks_hz": {
+      "gpu": "315000000",
+      "emc": "2750000000"
+    }
+  },
+  "interference_observed": false
+}

@@ -1,0 +1,22 @@
+{
+  "status": "screen_selected_requires_full_model_gate",
+  "configurations": {
+    "3542": {
+      "cross_attention_to_out": {
+        "shape": [
+          3542,
+          4096,
+          4096
+        ],
+        "b_row": true,
+        "original_b_row": false,
+        "opposite_layout": true,
+        "attrs": null,
+        "actual_and_changed_input_byte_gate": true,
+        "method": "torch_mm",
+        "screen_ratio_to_inherited": 0.8795854694995594,
+        "evidence": "results/opposite-layout-main-screen-v1/opposite-layout-screen.json"
+      }
+    }
+  }
+}

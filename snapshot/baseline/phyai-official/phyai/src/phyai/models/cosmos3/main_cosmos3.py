@@ -1,0 +1,207 @@
+"""Cosmos3 generation plugin entry."""
+
+from __future__ import annotations
+
+from typing import ClassVar
+from pathlib import Path
+from dataclasses import dataclass
+
+import torch
+
+from phyai.utils import get_logger, load_config
+from phyai.engine import Entry, Engine, EntryArgs
+from phyai.weights import load_pretrained
+from phyai.engine_config import ParallelConfig, get_engine_config
+from phyai.layers.quant.active import use_quant_plan, resolve_quant_plan
+from phyai.models.cosmos3.vae_wan import Cosmos3WanVAE, cosmos3_vae_weight_remap
+from phyai.models.cosmos3.avae_sound import (
+    Cosmos3AVAESoundDecoder,
+    cosmos3_avae_weight_remap,
+)
+from phyai.models.cosmos3.sampler_unipc import resolve_use_karras_sigmas
+from phyai.models.cosmos3.modeling_cosmos3 import (
+    Cosmos3Transformer,
+    cosmos3_weight_remap,
+)
+from phyai.models.cosmos3.parallel_cosmos3 import validate_cosmos3_parallel
+from phyai.models.cosmos3.requests_cosmos3 import Cosmos3T2VRequest
+from phyai.models.cosmos3.scheduler_cosmos3 import Cosmos3T2VScheduler
+from phyai.models.cosmos3.configuration_cosmos3 import (
+    Cosmos3Config,
+    Cosmos3WanVAEConfig,
+    Cosmos3AVAESoundConfig,
+)
+
+logger = get_logger(__name__)
+
+
+@dataclass
+class Cosmos3Args(EntryArgs):
+    """Args bundle for the cosmos3 generation plugin."""
+
+    checkpoint_dir: str | Path | None = None
+    config: Cosmos3Config | None = None
+    # cosmos-framework native generation default (sample_args ``shift=10.0``).
+    flow_shift: float = 10.0
+    # UniPC sigma schedule. Default False = linear-flow + flow_shift, matching the
+    # cosmos-framework native generation sampler. True = Karras (diffusers); ``None``
+    # reads use_karras_sigmas from the checkpoint's scheduler_config.json.
+    use_karras_sigmas: bool | None = False
+    load_sound: bool | None = None
+    weight_strict: bool = False
+    torch_compile: bool = False
+    compile_kwargs: dict | None = None
+
+
+def _should_load_sound(args: Cosmos3Args, config: Cosmos3Config) -> bool:
+    """Whether to build the AVAE: explicit ``load_sound`` wins, else ``sound_gen``."""
+    if args.load_sound is not None:
+        return bool(args.load_sound)
+    return bool(config.sound_gen)
+
+
+@Engine.register
+class Cosmos3Entry(Entry):
+    """Cosmos3 generation inference plugin entry (T2V / I2V / T2AV / I2AV)."""
+
+    name: ClassVar[str] = "cosmos3"
+    args_cls: ClassVar[type[EntryArgs]] = Cosmos3Args
+
+    parallel_domains: ClassVar[frozenset[str]] = frozenset(
+        {"cfg", "dense", "attention"}
+    )
+
+    @classmethod
+    def validate_parallel(
+        cls, parallel: ParallelConfig, replica_world_size: int | None = None
+    ) -> None:
+        super().validate_parallel(parallel, replica_world_size)
+        validate_cosmos3_parallel(parallel, replica_world_size)
+
+    def __init__(self) -> None:
+        # Default-init the slots so :meth:`step` / :meth:`close` /
+        # :meth:`dump_targets` can check for "setup not yet run".
+        self.transformer: Cosmos3Transformer | None = None
+        self.vae: Cosmos3WanVAE | None = None
+        self.avae: Cosmos3AVAESoundDecoder | None = None
+        self.scheduler: Cosmos3T2VScheduler | None = None
+
+    def setup(self, args: Cosmos3Args) -> None:  # type: ignore[override]
+        """Build the transformer + VAE (+ AVAE), load weights, warm the scheduler."""
+        if args.checkpoint_dir is None:
+            raise ValueError(
+                "Cosmos3Args.checkpoint_dir is required (no random-weight debug "
+                "path for a diffusion checkpoint this size)."
+            )
+        ckpt = Path(args.checkpoint_dir)
+        eng = get_engine_config()
+        device = eng.device.target
+        dtype = eng.device.params_dtype
+
+        # Transformer config: explicit override > checkpoint folder.
+        config = (
+            args.config
+            if args.config is not None
+            else load_config(ckpt / "transformer", Cosmos3Config)
+        )
+
+        # The engine already initialized the mesh and process kernel selector, so
+        # the model constructors below need no standalone register_mesh shim.
+        with use_quant_plan(resolve_quant_plan(ckpt / "transformer")):
+            self.transformer = Cosmos3Transformer(
+                config, params_dtype=dtype, device=device
+            ).eval()
+        load_pretrained(
+            self.transformer,
+            ckpt / "transformer",
+            remap=cosmos3_weight_remap,
+            strict=args.weight_strict,
+        )
+
+        vae_config = load_config(ckpt / "vae", Cosmos3WanVAEConfig)
+        self.vae = Cosmos3WanVAE(vae_config)
+        load_pretrained(
+            self.vae,
+            ckpt / "vae",
+            remap=cosmos3_vae_weight_remap,
+            strict=args.weight_strict,
+        )
+        self.vae = self.vae.to(device=device, dtype=dtype).eval()
+
+        if _should_load_sound(args, config):
+            avae_config = load_config(ckpt / "sound_tokenizer", Cosmos3AVAESoundConfig)
+            self.avae = Cosmos3AVAESoundDecoder(avae_config)
+            load_pretrained(
+                self.avae,
+                ckpt / "sound_tokenizer",
+                remap=cosmos3_avae_weight_remap,
+                strict=args.weight_strict,
+            )
+            self.avae = self.avae.to(device=device, dtype=dtype).eval()
+
+        use_karras = resolve_use_karras_sigmas(args.use_karras_sigmas, ckpt)
+        self.scheduler = Cosmos3T2VScheduler(
+            self.transformer,
+            vae=self.vae,
+            avae=self.avae,
+            device=device,
+            flow_shift=args.flow_shift,
+            use_karras_sigmas=use_karras,
+            use_cuda_graph=eng.runtime.use_cuda_graph,
+            torch_compile=args.torch_compile,
+            compile_kwargs=args.compile_kwargs,
+        )
+        self.scheduler.setup()
+        logger.info_rank0(
+            "Cosmos3 generation plugin ready (sound=%s, flow_shift=%s, "
+            "use_karras_sigmas=%s).",
+            self.avae is not None,
+            args.flow_shift,
+            use_karras,
+        )
+
+    def step(
+        self, request: Cosmos3T2VRequest
+    ) -> torch.Tensor | dict[str, torch.Tensor | int]:  # type: ignore[override]
+        """Run one generation request and decode it to media.
+
+        Video-only requests return pixels ``[B, 3, T, H, W]`` in ``[0, 1]``.
+        Audio requests (``request.sound_frames`` set) return
+        ``{"video": pixels, "sound": waveform [B, ch, samples] in [-1, 1],
+        "sample_rate": int}``.
+        """
+        if self.scheduler is None:
+            raise RuntimeError(
+                "Cosmos3Entry.step called before setup; the scheduler is None."
+            )
+        out = self.scheduler.step(request)
+        if isinstance(out, dict):
+            return {
+                "video": self.scheduler.decode(out["video"]),
+                "sound": self.scheduler.decode_sound(out["sound"]),
+                "sample_rate": self.scheduler.sound_sample_rate,
+            }
+        return self.scheduler.decode(out)
+
+    def close(self) -> None:
+        if self.scheduler is not None:
+            self.scheduler.close()
+        self.scheduler = None
+        self.transformer = None
+        self.vae = None
+        self.avae = None
+
+    def dump_targets(self) -> dict[str, torch.nn.Module]:  # type: ignore[override]
+        """Expose the denoiser for engine-driven tensor dumping.
+
+        Returns ``{"transformer": self.transformer}`` so dumped operator keys
+        align with the ``transformer/`` parameter names. Returns ``{}`` before
+        :meth:`setup` so a dump-enabled engine that queries early records nothing
+        instead of crashing.
+        """
+        if self.transformer is None:
+            return {}
+        return {"transformer": self.transformer}
+
+
+__all__ = ["Cosmos3Args", "Cosmos3Entry"]

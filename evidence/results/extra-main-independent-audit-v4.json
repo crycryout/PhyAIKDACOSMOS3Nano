@@ -1,0 +1,63 @@
+{
+  "complete": true,
+  "gate_passed": true,
+  "independent_pids": [
+    1775448,
+    1776128
+  ],
+  "rows": [
+    {
+      "case": "main_same_cfg_47",
+      "reference_case": "main_same_cfg_47",
+      "sha256": "2f13412aa2aa40d186f50d2418e73ea7e33dafe55db62adf4003a7c245457ff0",
+      "actual_main_dispatches": 0,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 1,
+        "denoiser": 8
+      },
+      "byte_equal": true
+    },
+    {
+      "case": "main_same_length_different_cfg_47",
+      "reference_case": "main_same_length_different_cfg_47",
+      "sha256": "a8f6b1d2e6a59d315f8d153b3fd5e303acbd97cf9ee12838bb0a498a5ec69cc6",
+      "actual_main_dispatches": 576,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "byte_equal": true
+    },
+    {
+      "case": "main_fresh_stream_1",
+      "reference_case": "main_same_length_different_cfg_47",
+      "sha256": "a8f6b1d2e6a59d315f8d153b3fd5e303acbd97cf9ee12838bb0a498a5ec69cc6",
+      "actual_main_dispatches": 576,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "byte_equal": true
+    },
+    {
+      "case": "main_fresh_stream_2",
+      "reference_case": "main_same_length_different_cfg_47",
+      "sha256": "a8f6b1d2e6a59d315f8d153b3fd5e303acbd97cf9ee12838bb0a498a5ec69cc6",
+      "actual_main_dispatches": 576,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "byte_equal": true
+    }
+  ],
+  "method": "stdlib zip raw BF16 storage; no torch or pickle"
+}

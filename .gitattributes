@@ -1,0 +1,5 @@
+* text=auto
+# Preserve inherited runtime and action archive hashes.
+snapshot/** -text -whitespace
+evidence/** -whitespace
+evidence/**/*.pt -text

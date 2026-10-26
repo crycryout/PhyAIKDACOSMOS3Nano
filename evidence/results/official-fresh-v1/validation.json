@@ -1,0 +1,887 @@
+{
+  "complete": true,
+  "exact_gate_passed": true,
+  "backend": "official",
+  "cases": [
+    {
+      "event_ms": 11515.4794921875,
+      "ready_wall_ms": 11515.766981989145,
+      "host_submit_ms": 11515.63892303966,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "d08720366b467d47f543f73267f241b5bb0b198e1b029495f236baab469e25ce",
+      "byte_equal": true,
+      "case": "len1_3",
+      "workload": {
+        "name": "len1_3",
+        "positive_padded": 1,
+        "positive_real": 1,
+        "negative_padded": 3,
+        "negative_real": 3,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8300.5400390625,
+      "ready_wall_ms": 8300.745918881148,
+      "host_submit_ms": 8300.627166870981,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "390f7b54aa21e7cab1e2708881f55199148dda281d9589f17b67fdc704cb9b39",
+      "byte_equal": true,
+      "case": "len31_17",
+      "workload": {
+        "name": "len31_17",
+        "positive_padded": 31,
+        "positive_real": 31,
+        "negative_padded": 17,
+        "negative_real": 17,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8406.552734375,
+      "ready_wall_ms": 8406.757686054334,
+      "host_submit_ms": 8406.645684037358,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "8fb26b97395eafbcb046e350124335cccb387c6eeffea6b31a0ca61bca7645da",
+      "byte_equal": true,
+      "case": "len63_64",
+      "workload": {
+        "name": "len63_64",
+        "positive_padded": 63,
+        "positive_real": 63,
+        "negative_padded": 64,
+        "negative_real": 64,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8295.8134765625,
+      "ready_wall_ms": 8296.01375781931,
+      "host_submit_ms": 8295.91814498417,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "4462eb789b5c291f16385fdf5bc85d71986a39d563873a2fb2e959065d704db3",
+      "byte_equal": true,
+      "case": "len65_97",
+      "workload": {
+        "name": "len65_97",
+        "positive_padded": 65,
+        "positive_real": 65,
+        "negative_padded": 97,
+        "negative_real": 97,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8304.66796875,
+      "ready_wall_ms": 8304.86932513304,
+      "host_submit_ms": 8304.768553934991,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "a32fd529ff789d445a330fde6af8fe750bd5769fcc535c2338c50ac566067fba",
+      "byte_equal": true,
+      "case": "len127_13",
+      "workload": {
+        "name": "len127_13",
+        "positive_padded": 127,
+        "positive_real": 127,
+        "negative_padded": 13,
+        "negative_real": 13,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8292.966796875,
+      "ready_wall_ms": 8293.164828093722,
+      "host_submit_ms": 8293.071391060948,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "24dd3161e6f9f200b64881f4ff3d5967db84410e9d4bb69e852d7b3d79512bca",
+      "byte_equal": true,
+      "case": "len128_129",
+      "workload": {
+        "name": "len128_129",
+        "positive_padded": 128,
+        "positive_real": 128,
+        "negative_padded": 129,
+        "negative_real": 129,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8327.0869140625,
+      "ready_wall_ms": 8327.286672079936,
+      "host_submit_ms": 8327.183929039165,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "793a9c0eb1147095194ac04e3ecd502ff2d1198e34180af42764844da29e962c",
+      "byte_equal": true,
+      "case": "len257_7",
+      "workload": {
+        "name": "len257_7",
+        "positive_padded": 257,
+        "positive_real": 257,
+        "negative_padded": 7,
+        "negative_real": 7,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8154.076171875,
+      "ready_wall_ms": 8154.272112064064,
+      "host_submit_ms": 8154.144091065973,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "42ae3f780707a4ce38fe1882b8ef623edffebe9fcc5607580fbc83e1411dd3fc",
+      "byte_equal": true,
+      "case": "padded96_real31",
+      "workload": {
+        "name": "padded96_real31",
+        "positive_padded": 96,
+        "positive_real": 31,
+        "negative_padded": 64,
+        "negative_real": 17,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8382.53125,
+      "ready_wall_ms": 8382.731084013358,
+      "host_submit_ms": 8382.609192980453,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "7993358ba2fa959f2dc5215b0e35988147d92441cb41bd44107349a98651b58d",
+      "byte_equal": true,
+      "case": "same_shape_changed_ids",
+      "workload": {
+        "name": "same_shape_changed_ids",
+        "positive_padded": 31,
+        "positive_real": 31,
+        "negative_padded": 17,
+        "negative_real": 17,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8361.1943359375,
+      "ready_wall_ms": 8361.39251315035,
+      "host_submit_ms": 8361.261223210022,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "7071011bf03ce618753ec55e2bdd0be7d682433e973ad4ef62e4856660f9303e",
+      "byte_equal": true,
+      "case": "same_shape_changed_mask",
+      "workload": {
+        "name": "same_shape_changed_mask",
+        "positive_padded": 96,
+        "positive_real": 47,
+        "negative_padded": 64,
+        "negative_real": 29,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8555.3955078125,
+      "ready_wall_ms": 8555.594683857635,
+      "host_submit_ms": 8555.493903812021,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "390f7b54aa21e7cab1e2708881f55199148dda281d9589f17b67fdc704cb9b39",
+      "byte_equal": true,
+      "case": "return_len31_17",
+      "workload": {
+        "name": "return_len31_17",
+        "positive_padded": 31,
+        "positive_real": 31,
+        "negative_padded": 17,
+        "negative_real": 17,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8461.6708984375,
+      "ready_wall_ms": 8461.871922947466,
+      "host_submit_ms": 8461.781095946208,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "4462eb789b5c291f16385fdf5bc85d71986a39d563873a2fb2e959065d704db3",
+      "byte_equal": true,
+      "case": "len65_nondefault_stream",
+      "workload": {
+        "name": "len65_nondefault_stream",
+        "positive_padded": 65,
+        "positive_real": 65,
+        "negative_padded": 97,
+        "negative_real": 97,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "nondefault",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 3817.741455078125,
+      "ready_wall_ms": 3817.8361479658633,
+      "host_submit_ms": 3817.7459239959717,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "35bc66d5e8f0f3f0c42ecbd78004604fb37f6f527d42eaa17a6f47b2b7a85f80",
+      "byte_equal": true,
+      "case": "video320x512",
+      "workload": {
+        "name": "video320x512",
+        "positive_padded": 33,
+        "positive_real": 33,
+        "negative_padded": 18,
+        "negative_real": 18,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          9,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 4319.474609375,
+      "ready_wall_ms": 4319.575759815052,
+      "host_submit_ms": 4319.492655806243,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "46baa1e9fdccb30120ac75244e7f5dcb2be65c7e4fc4cffab8585fa22459bfb9",
+      "byte_equal": true,
+      "case": "video17frames",
+      "workload": {
+        "name": "video17frames",
+        "positive_padded": 61,
+        "positive_real": 61,
+        "negative_padded": 23,
+        "negative_real": 23,
+        "same_cfg": false,
+        "frames": 17,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          5,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8532.2568359375,
+      "ready_wall_ms": 8532.451285980642,
+      "host_submit_ms": 8532.359774922952,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        16,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "05140566f7dbd1db01324ae34241524b48d0eaa3696d7427783dbecae95d8bad",
+      "byte_equal": true,
+      "case": "action16",
+      "workload": {
+        "name": "action16",
+        "positive_padded": 65,
+        "positive_real": 65,
+        "negative_padded": 17,
+        "negative_real": 17,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 16,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 3153.90673828125,
+      "ready_wall_ms": 3153.985333861783,
+      "host_submit_ms": 3153.887582011521,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 1,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "a5b42ec1f91a7383568676580c4a5b14d678644ab147bf0767bbf8c0c9afa35d",
+      "byte_equal": true,
+      "case": "same_cfg_dynamic_query",
+      "workload": {
+        "name": "same_cfg_dynamic_query",
+        "positive_padded": 47,
+        "positive_real": 47,
+        "negative_padded": 47,
+        "negative_real": 47,
+        "same_cfg": true,
+        "frames": 33,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          9,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 3197.12646484375,
+      "ready_wall_ms": 3197.1984850242734,
+      "host_submit_ms": 3197.14441918768,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        2,
+        8,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "c87c842486808c82e51fa3b2e9bed7a31b4494b446d690203835fdbecb9accf2",
+      "byte_equal": true,
+      "case": "batch2_official_fallback",
+      "workload": {
+        "name": "batch2_official_fallback",
+        "positive_padded": 11,
+        "positive_real": 11,
+        "negative_padded": 7,
+        "negative_real": 7,
+        "same_cfg": false,
+        "frames": 5,
+        "height": 128,
+        "width": 192,
+        "video_shape": [
+          2,
+          8,
+          12
+        ],
+        "batch": 2,
+        "action_chunk": 8,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8334.90234375,
+      "ready_wall_ms": 8335.094484966248,
+      "host_submit_ms": 8334.99887213111,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "1de7566a9517e249e9015d3aa17886f88e22b57e88ac543415c7f55804fd105e",
+      "byte_equal": true,
+      "case": "long512",
+      "workload": {
+        "name": "long512",
+        "positive_padded": 512,
+        "positive_real": 512,
+        "negative_padded": 33,
+        "negative_real": 33,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8268.2509765625,
+      "ready_wall_ms": 8268.440194893628,
+      "host_submit_ms": 8268.304988974705,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "1de7566a9517e249e9015d3aa17886f88e22b57e88ac543415c7f55804fd105e",
+      "byte_equal": true,
+      "case": "repeat_long512_warm",
+      "workload": {
+        "name": "repeat_long512_warm",
+        "positive_padded": 512,
+        "positive_real": 512,
+        "negative_padded": 33,
+        "negative_real": 33,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 8365.998046875,
+      "ready_wall_ms": 8366.188702872023,
+      "host_submit_ms": 8366.077525075525,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "4796344a6e742d57f52ee52d7aeef263d0bd46a46a3f43138a8253d30cf026a0",
+      "byte_equal": true,
+      "case": "conditioning_frames0_2",
+      "workload": {
+        "name": "conditioning_frames0_2",
+        "positive_padded": 67,
+        "positive_real": 67,
+        "negative_padded": 19,
+        "negative_real": 19,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 3099.388671875,
+      "ready_wall_ms": 3099.4634740054607,
+      "host_submit_ms": 3099.3660918902606,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        16,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "afd1ad6f43aa743f2b1d294d0e5e1a83aec3c386c7fe2ad3c96c12a5c54f88f9",
+      "byte_equal": true,
+      "case": "unseen_query_shape",
+      "workload": {
+        "name": "unseen_query_shape",
+        "positive_padded": 37,
+        "positive_real": 37,
+        "negative_padded": 21,
+        "negative_real": 21,
+        "same_cfg": false,
+        "frames": 17,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          5,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 16,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 3114.783935546875,
+      "ready_wall_ms": 3114.858578890562,
+      "host_submit_ms": 3114.7657248657197,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "7288c3e45e82ed1a83a0f808aaf77f083c1ded4480bddbba9c084499caef134b",
+      "byte_equal": true,
+      "case": "same_length_different_cfg",
+      "workload": {
+        "name": "same_length_different_cfg",
+        "positive_padded": 47,
+        "positive_real": 47,
+        "negative_padded": 47,
+        "negative_real": 47,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          9,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    }
+  ],
+  "errors": []
+}

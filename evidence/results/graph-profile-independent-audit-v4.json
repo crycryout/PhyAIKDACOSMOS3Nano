@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "gate_passed": true,
+  "runs": [
+    {
+      "tag": "graph-fallback-full-port-v4",
+      "pid": 1783260,
+      "frozen_source_files_verified": 939,
+      "mapped_binaries": 173
+    },
+    {
+      "tag": "profile-main-full-port-v4",
+      "pid": 1783609,
+      "frozen_source_files_verified": 939,
+      "mapped_binaries": 174
+    }
+  ],
+  "graph_raw_storage_checks": [
+    {
+      "case": "graph_len11_7",
+      "bytes": 160,
+      "raw_storage_sha256": "3f3644299b4391e1b36dd26362d926fb6c3901ec07359337eba7cef55704e3e1",
+      "byte_equal": true
+    },
+    {
+      "case": "graph_len33_19",
+      "bytes": 160,
+      "raw_storage_sha256": "1eda0d797fe7300107deb4bb6726d8cc9f104239e52dca472a06ba3d8f34368d",
+      "byte_equal": true
+    }
+  ],
+  "profile": {
+    "phase_counts": {
+      "vae_encode": 1,
+      "engine_step": 1,
+      "condition_encode": 2,
+      "denoiser": 8
+    },
+    "actual_main_extension_dispatch": 576,
+    "physical_gen_gemm_kernels": 1152,
+    "physical_attention_main_kernels": 288,
+    "trace_sha256": "470e382fb36aeb5716a47dee3d7a15a1f7730bcb816b480f2c3fa2625c0a1747"
+  },
+  "method": "stdlib source hashes, graph zip raw BF16 storages and explicit same-trace kernel correlation; no torch or pickle"
+}

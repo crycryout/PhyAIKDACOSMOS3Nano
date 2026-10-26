@@ -1,0 +1,1 @@
+{"context_retained_until_process_exit": true, "explicit_release_before_python_teardown": false, "normal_exit_and_errors_preserved": true}

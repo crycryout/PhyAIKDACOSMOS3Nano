@@ -1,0 +1,1802 @@
+{
+  "pid": 1775448,
+  "harness": "$TASK_ROOT/bench/validate_extra_main_paths_v4.py",
+  "mapped_binaries": [
+    {
+      "path": "$THOR_HOME/.cache/flashinfer/0.6.17/110a/cached_ops/silu_and_mul/silu_and_mul.so",
+      "bytes": 80912,
+      "sha256": "d84b3de67ee7ce94cbed330842d351bf37e4f75bb7a1be7810e6743a9a02391f",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/.cache/flashinfer/0.6.17/110a/cached_ops/single_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_head_dim_qk_128_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False/single_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_head_dim_qk_128_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False.so",
+      "bytes": 995240,
+      "sha256": "4612c97da9e53e73f9473a8831ec7a80cc7571bfd41de253d663b53883931824",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/P45PYHTOVUHZVZ5DZBYL5QY2NIEM4SVYJ6U7YJR3UCPJ6XH2AE5A/__triton_launcher.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 71776,
+      "sha256": "23b3c188482aea0a91d8a3b84026ca4f46c4826cf5daaac774a3da3485ba106e",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/XPDQBXUBWOMML5BDUWGIQQLIVFXASPJCFVIKSURMOCNRYA63R4SA/__triton_launcher.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 71776,
+      "sha256": "a29055878c1eae1735acb3fcdfbc4f15f4feee6a048c070da470126223c3c407",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/YK4VZ2BI4GMJSPC3BQ2UKVAY3EVEJ2V5Y3JAVA4MQ4AUGAW7YFUA/cuda_utils.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 73880,
+      "sha256": "7f143ec7f4e73616bccf7eef4ea76af2fd7bf22b36ae15c4e292e6ef8c5fc589",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/PIL/_imaging.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 3484265,
+      "sha256": "2bdbf62e38af4c59c6563b9391f11d411e42f5ced5dc0991aaf31bdda72928a8",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/PIL/_imagingft.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 527761,
+      "sha256": "b86397d8f807f381a7623f49ed717d6e94d072f7bd4959d9d1b4edeefd060dba",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/charset_normalizer/cd.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 285408,
+      "sha256": "21f9ca6dcd07f65a7ceec131140cd23d388bc09b2b377e83ff03fb6669974553",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/charset_normalizer/md.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 388712,
+      "sha256": "9d96946330b650acbad4ab917f5cf37f1c7d3a7fada1563d166513e09c2ee3cf",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/_bindings/cydriver.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 533024,
+      "sha256": "6ae437b694ad31accb9cd8745fa5dd9e52e11af045e0da683966be7b3341e67e",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/_bindings/cyruntime.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 995272,
+      "sha256": "eacbaa17b3bb3d294d7521b84960493fd5e36f190f1c5e80b6a66b0e4c869ca4",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/_bindings/cyruntime_ptds.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 861168,
+      "sha256": "8f1654828d0364d9db7a019eaa6dbc4694cf6d6eb0f0364878275dade9bfd27a",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/_internal/nvrtc.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 201488,
+      "sha256": "93a06b7f6f0ad1a7304994defd20775b94975e967cea14578820f8856f17873b",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/_internal/utils.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 267280,
+      "sha256": "dbedbc6b83be25caae6cb1700da3bb953003a40888c6c0c7ade71142c533eed5",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/cydriver.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 338656,
+      "sha256": "5857b6562621feebcea2ba13df1a236068cc4aa7e049ce9e8a944e452deb34bf",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/cynvrtc.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 199984,
+      "sha256": "59bc4f67668802c4d0063d7d382d0c94a6948b432d4bae9e0da97e826d1428f4",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/cyruntime.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 205120,
+      "sha256": "d00704811789360b62fd9af11ac8a8e85326eba00944244b3af31d33d4c1c95b",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/driver.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 6910920,
+      "sha256": "23596c158b5ef437517605405aa25978d7a442fa1c222d59a392300bc39a0119",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/nvrtc.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 545200,
+      "sha256": "12b76bf459ae07dae69bcd8cd80fc4d7ddad4a82284a1f6ac11b1911d16c34eb",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/bindings/runtime.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 5097776,
+      "sha256": "9c7dad2e1b498c3c8d46446c2ac35ed06d4910f9a9baec3a5a14d7a70cd058fd",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cuda/tile/_cext.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 250504,
+      "sha256": "bdeb992b30095ae6fc137b5c4196c481d8a30b131dcc96ec7eb28612c9932301",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/cudnn/_compiled_module.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 6531896,
+      "sha256": "432576b55baa23fd482f4e9b1a7d9510f143c6fd819250a4831052ba706aed5f",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/markupsafe/_speedups.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 230792,
+      "sha256": "68f3ea306612ebbe28af4b27b85869d1a194f53aa9807f23cf4946254d8c45a2",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/ml_dtypes/_ml_dtypes_ext.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 1978624,
+      "sha256": "88da6392003e04ad1d79762b8df72b6070d5c5914438b8ef083fbf1531448558",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 6121985,
+      "sha256": "3347020b8080190eca489ada679fd60306e54647ab4f0c8dac9165e4814b5740",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/fft/_pocketfft_umath.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 624952,
+      "sha256": "b954742f8a4599e017c1377203f2034468aa7698438c932895b5edcce2fb8060",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 395793,
+      "sha256": "bc5d92983c78b71b65cc92e3d5253291b3cc12d7b73b57996e720852caa91488",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/random/_bounded_integers.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 411552,
+      "sha256": "a7d7a2412191ab1126901b2567764b21028fa71076330dad90aace5626b15238",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/random/_common.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 349272,
+      "sha256": "513196e6dae92f87b7133df8f2e038b2fe25e65a745da10a748ae097a439650e",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/random/_generator.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 846080,
+      "sha256": "cdc0289adaf63302dc6bf6546e3c078748e952822556f8f350ef916439e4ef8e",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/random/_mt19937.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 283824,
+      "sha256": "6e82b24eb43f16f133aea16154206a77e36398c84a0ec350d721c440d844505b",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/random/_pcg64.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 287072,
+      "sha256": "6d3be89216556f4f780dbeedcc59b0cf7761847303ca2c324bd6651e528f6133",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/random/_philox.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 283728,
+      "sha256": "973ea4cb7b43671b8fc27cbd1ea5939ea3bbcf9837ff1c05f3784e8cbc0b2547",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/random/_sfc64.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 216360,
+      "sha256": "c372dfbb81354947bca847c8fa9a69818cf0c1a906ab253877f8e6f81a9ae735",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/random/bit_generator.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 299064,
+      "sha256": "c6ac1e6898f608aaac01e4f6817373863514912f70123252b5e60018149ea2ed",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy/random/mtrand.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 704328,
+      "sha256": "cdd1092f60ec599895aa8b66a3c925d1be3c0a4c8841e817ac2a83b6282c1dc3",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy.libs/libgfortran-e1b7dfc8-d8198c01.so.5.0.0",
+      "bytes": 1605377,
+      "sha256": "25899a29a06d3f2927021b4823d858558839fea0e7e759eedb8926fd0a339ea4",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-bb25d554.so",
+      "bytes": 27055193,
+      "sha256": "5dafca6786e1e366f29ff5e57a6b3beb66a4a02cadf899f51b38fa9fb22c5798",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcublas.so.13",
+      "bytes": 61918408,
+      "sha256": "7761d260387b95fa13b7ec101453abca45ef972d3e6ccc8bcf54251e1ac0470b",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcublasLt.so.13",
+      "bytes": 629929568,
+      "sha256": "3839e12c3b69ed8eb732e5d5f8e749403a582a9d706f779017c785152d9e62f9",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcudart.so.13",
+      "bytes": 707752,
+      "sha256": "7bdba2b5b08cbdc85203c41cc94598adedb1bcfea7cb574ca693ac73599e4e63",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcufft.so.12",
+      "bytes": 283285752,
+      "sha256": "58d0f3c53a56aa8e407df4a53be21969b60fa464b4dfa71631188f4e13596c28",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcufile.so.0",
+      "bytes": 3006936,
+      "sha256": "0dc9520a096013cc4009564dcd7824923eb2850fc35dc5812efe3ec9fa4d0068",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcupti.so.13",
+      "bytes": 3850656,
+      "sha256": "a55e03ccab21830f5b9d1ca7a02ecd59c557e0d54c769a181ad1140a3cff8ac1",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcurand.so.10",
+      "bytes": 147889368,
+      "sha256": "80aedb15af13cf3b43cf8394fc9b5f9f299d6eaa5d2ddd6411b26af25b5334a2",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcusolver.so.12",
+      "bytes": 153574032,
+      "sha256": "84a09b45594744af44ecf19011e70b43d33fd2e0fd7e8474b7213bf0039256cf",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcusparse.so.12",
+      "bytes": 174842648,
+      "sha256": "a6643e78b7f002021a5e8d3b64a3ef7ce7caf8b9d05758cfee7e2b53f13d8988",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libnvJitLink.so.13",
+      "bytes": 89258944,
+      "sha256": "2ad249d2d60c87ea4941f5ce7ce1b06d4096032e95381c237f929cdaa5c7d5cc",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libnvrtc-builtins.so.13.0",
+      "bytes": 4380456,
+      "sha256": "84f1c5031bfe1146375b367b2c7fb8d31ea00430be7172177eeb5d04ab813b69",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cu13/lib/libnvrtc.so.13",
+      "bytes": 99505944,
+      "sha256": "64db9c3fc128f4a57a22c314fda08831a8e3a725d439a70076a0fb98f7bea1b7",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn.so.9",
+      "bytes": 133120,
+      "sha256": "1812da49eaec5a212b5fd11f9667f1815c888c4474c2cdf7a4ee9378c40b5d93",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn_engines_precompiled.so.9",
+      "bytes": 276578824,
+      "sha256": "f2bf6af0a80d8781908f779b54641b45f481d97f9cf9a1742fa293c7d33a3e11",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn_engines_runtime_compiled.so.9",
+      "bytes": 26297224,
+      "sha256": "d60a8b6c04242bd86db1057a11c9a900eb78b61fbe675fd20d30589c66f5261d",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn_graph.so.9",
+      "bytes": 3728752,
+      "sha256": "f5d08ab29c6a857b5391f88974ab68dc7a283cbd4d9d44094200d834450a2da9",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cudnn/lib/libcudnn_heuristic.so.9",
+      "bytes": 57347312,
+      "sha256": "1c37bce51140a5a0363c6e32baa35f5df1ddb9ced46ea2e4477be322c3fa560c",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/cusparselt/lib/libcusparseLt.so.0",
+      "bytes": 273881681,
+      "sha256": "20de6b36cbbf5753b26826eec753a2005608e14cbc3bfdd4681138098be86941",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/nccl/lib/libnccl.so.2",
+      "bytes": 219355704,
+      "sha256": "ad593e48bb6240e88426297db30a2b04a43712ed479064ac0691e27f5d7f4a25",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia/nvshmem/lib/libnvshmem_host.so.3",
+      "bytes": 40950048,
+      "sha256": "868de4fbf53f19f0a2537e42c70d77396db981475303f3c57ce40e82653c8bba",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/cu13/lib/libcute_dsl_runtime.so",
+      "bytes": 42330440,
+      "sha256": "e6e8a61e7b9f5586ab58251923c0b698d0c8b31e32f22aa5435969406a7ecf1e",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/_mlir/_mlir_libs/_cutlass_ir.cu13.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 170982752,
+      "sha256": "199259722caeeb287ec949cf9f63e0459a8958481a01e43069509da6017c8a7e",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libXau-7926f62a.so.6.0.0",
+      "bytes": 132921,
+      "sha256": "c7088cf9b8e8043b951c8cdcef1c2a1707d7952546e8d142545d5db5abd5a92b",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libbrotlicommon-f79e5820.so.1.2.0",
+      "bytes": 328825,
+      "sha256": "4fdb2876b5b6ff2aa5068e33fcb3cfe031f76b3a2863e7070e2268ca7278e8e0",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libbrotlidec-53ab751a.so.1.2.0",
+      "bytes": 394113,
+      "sha256": "209889d4e37718e8c2dc21d446a0ae8b7c21bd44ef5dd88a22854c81e912b4f6",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libfreetype-c6d69da6.so.6.20.6",
+      "bytes": 1774889,
+      "sha256": "f6f00e7b1e0219e3562f6bbc85184a5237e59b7ee9acd731ed3a5d9f9cfbd301",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libharfbuzz-905f7917.so.0.61421.0",
+      "bytes": 1195505,
+      "sha256": "82dac4dd891dce97aa695d920ae66da99af7a3ee5559197f49484292bd47aca8",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libjpeg-f7df23c0.so.62.4.0",
+      "bytes": 857801,
+      "sha256": "543efcabfed7699011cd724e1631429a711e780a011885a68a25fe8078861d5d",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/liblzma-d6711707.so.5.8.3",
+      "bytes": 462921,
+      "sha256": "e75533349dd5aafd624f883fef265be5f8bebbd51bd9cd72ae645f3f1a17fabb",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libopenjp2-0ec72a70.so.2.5.4",
+      "bytes": 794721,
+      "sha256": "2b64551d10c8475dbde5ae9be1baa2055efe55de3b5c12a41567e28354960caf",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libpng16-5a20c924.so.16.58.0",
+      "bytes": 466409,
+      "sha256": "2c9b85d06704c3cbe603fa13f9a754de50651b49d42d76eb32ab0806cce56ce1",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libtiff-fb36a6b9.so.6.2.0",
+      "bytes": 1053721,
+      "sha256": "73d459525e34ce575e0ab576672feb5f67c67a9780fad642adc3ab63b39d3ca5",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libxcb-d77ff8de.so.1.1.0",
+      "bytes": 476729,
+      "sha256": "451478f6c0feb09e1637bde9e5f670f342b5299e68c2f8848f6cf3ae964c431d",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/pillow.libs/libzstd-a93d6be8.so.1.5.7",
+      "bytes": 1644817,
+      "sha256": "1e08e46977ddc422e2e055e7d009ae36159cf762d2762a45a4599869007c13f9",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/psutil/_psutil_linux.abi3.so",
+      "bytes": 321912,
+      "sha256": "463d351dd4b4d93957d30a7b645dd0bccd09276fd5d26c0ebd8c10e5088ba1a3",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/regex/_regex.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 2675304,
+      "sha256": "33bbccfc9fa40720e48102cb76c4f1a2263f3330f1f08dd77a8d8efe8f58708f",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/safetensors/_safetensors_rust.abi3.so",
+      "bytes": 1203048,
+      "sha256": "8c623b2077a05539bbdeb345edf3970a33597fbda0e3c9f3e1377865c55b3873",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/sentencepiece/_sentencepiece.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 1776784,
+      "sha256": "da980d0c5187cd27ab206fa6ef629424b5f92b2d847ab6902d8bc0338343d847",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/setproctitle/_setproctitle.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 254344,
+      "sha256": "36e422f9d4ab34abd77605b05d26a1b72db1d1b4330f0560fa0135de850ef085",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/tokenizers/tokenizers.abi3.so",
+      "bytes": 9768912,
+      "sha256": "fa049ce975669d8a90fb48960f412e626fa54cf596c2f75d6820949f4888e910",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/_C.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 263057,
+      "sha256": "16eb30a481f7739478da21b9a624e36eeba322d57f0001af2221d00a597b8c10",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libarm_compute.so",
+      "bytes": 17850537,
+      "sha256": "3932444706d9b146fdf52fa81bd6b6c22fd4adbff124734f8afcae4bd676bcd2",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libarm_compute_graph.so",
+      "bytes": 1310433,
+      "sha256": "98b45299d32d2027c46f07bf413aa55832b88f6ffa40cb7f50345417cf990aab",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libc10.so",
+      "bytes": 1790129,
+      "sha256": "67c32596d62532bebec290f9980120d0d82bd3c365bee656c9331bee93a7b56b",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libc10_cuda.so",
+      "bytes": 737609,
+      "sha256": "f6e98ec41998c434ad5a9a459e2253bb427bdfe956f51cfa824bcfa1f1880ff0",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libgomp.so.1",
+      "bytes": 344073,
+      "sha256": "dfee810d70d5df631d5cbf4170273938cf0ab5756caa65c7cd264746cdf886ad",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libnvpl_blas_core.so.0",
+      "bytes": 2562097,
+      "sha256": "5d74d2a7d48ace2b563405d42695053f8dd058a92db19a5e54ecdeab21a3f6d5",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libnvpl_blas_lp64_gomp.so.0",
+      "bytes": 469313,
+      "sha256": "4ba3cde968a086163fcfc923c0fabcfb43be2cfbea7662399889b3cf086f4077",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libnvpl_lapack_core.so.0",
+      "bytes": 1710681,
+      "sha256": "10ef87919b461fe818a9bfabf149526150cf463d938ad1aa0863311ea4a10c15",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libnvpl_lapack_lp64_gomp.so.0",
+      "bytes": 5936761,
+      "sha256": "0e02dc39b705e466bb887d6967140ff4c02595f0e10b1865adb012fc232352de",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libshm.so",
+      "bytes": 266577,
+      "sha256": "77ab6bd71df6c4d04b7c07c62cb5400f955f16a557730a39c3ffc8bded3ffc67",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libtorch.so",
+      "bytes": 273777,
+      "sha256": "ab07676deb8234b91ece5b8674ff30b600449acef88d56f3f719abd668771723",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so",
+      "bytes": 259986081,
+      "sha256": "af8453bb5bfffe061a27b21975467473b8f3e4daa86403c6d1259a7283e3ddb1",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so",
+      "bytes": 416034353,
+      "sha256": "9b2953817f200e2e8970ed1e1c69864a4bdda2622dba9738459a6b9e64729b57",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libtorch_cuda_linalg.so",
+      "bytes": 759857,
+      "sha256": "7f27d8e0c075dde0ee3530f806cb7a43702b159da3f4dc0bae945dee60ffa8e8",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libtorch_global_deps.so",
+      "bytes": 262993,
+      "sha256": "03301852e6bf75fa1c57009e0822526fada43202a8f2d81976d407e8671f4f49",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libtorch_nvshmem.so",
+      "bytes": 3986473,
+      "sha256": "e04a811196feb2870019b729f5e6920a98b955923b9d7561c44af9717429c4e1",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torch/lib/libtorch_python.so",
+      "bytes": 30190129,
+      "sha256": "cb10af8a5e340d4e8e541fa3808b4f55d98e63376f1d2b8a220bd966c559ef44",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torchvision/_C.so",
+      "bytes": 8360576,
+      "sha256": "d73589b3fd188a723f760e1f87ffd88fc323287aed726b863169bbdf4630990c",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torchvision/image.so",
+      "bytes": 959905,
+      "sha256": "d70f1f07e49a40ccf93318e06acd527a4dcfa338b2d08c1ae489e63e2460e354",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torchvision.libs/ld-linux-aarch64.5cbc5e90.so.1",
+      "bytes": 1044648,
+      "sha256": "1e5b5c6425e384efdf3a0a63b80cb6a94c3d94be2ad2465e64cc478d55fdc4a7",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torchvision.libs/libcudart.faf08d9a.so.13",
+      "bytes": 707752,
+      "sha256": "7bdba2b5b08cbdc85203c41cc94598adedb1bcfea7cb574ca693ac73599e4e63",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torchvision.libs/libjpeg.7df6f605.so.8",
+      "bytes": 794073,
+      "sha256": "9fa1cd4b9a68c0e78c7df7d0430dc892b258f2c42bebe79c0ae279da38247c0a",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torchvision.libs/libnvjpeg.36e11081.so.13",
+      "bytes": 5526168,
+      "sha256": "ae5a5fd164f93b3ccd12e6017270a17c08acc156adfcf991e81fcc3ac859fe14",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torchvision.libs/libpng16.25e2955a.so.16",
+      "bytes": 464737,
+      "sha256": "30d4c482681144dbf00c3ed98c0dd1ebb112fd228495b571b7d4b188a7cff7ab",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torchvision.libs/libsharpyuv.a91a2b15.so.0",
+      "bytes": 132409,
+      "sha256": "9aa1bdd4f746bb36d5c52216e2108096b200b05ae09d30a93c0aef9b710914e4",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torchvision.libs/libwebp.4d2ef5b1.so.7",
+      "bytes": 658129,
+      "sha256": "5e1fb1877bb7c84c3267a8313d93f7ae5bc2f1f29f1b6ebc06ddb2afafcb0b18",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/torchvision.libs/libz.ffa36e70.so.1",
+      "bytes": 200169,
+      "sha256": "8efad8c97e94a208cc343bde44dcc8ee9595615112ddfa62a059159658ad2dbd",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/triton/_C/libtriton.so",
+      "bytes": 423337016,
+      "sha256": "a6bf8ca7eb07e7421814ea2a012f1462f4eff8c66822405d6eccb66d2c9f87d5",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/tvm_ffi/core.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 945504,
+      "sha256": "03033adc5e199617b4a76bc9baa3431ba1b1e392fbfb7e3ab6a4fab3bbdd0cc5",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/tvm_ffi/lib/libtvm_ffi.so",
+      "bytes": 1839184,
+      "sha256": "ec92c54d5f62841cba18782390f60c18700affcadaa79d4e590e0c9fed267065",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/tvm_ffi/lib/libtvm_ffi_testing.so",
+      "bytes": 1448240,
+      "sha256": "a37a200bb99d81a0d7e6c1d86f711acb0bbfa51caf2a62d40c8ec68badb5d2ae",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "$THOR_HOME/rjc/pi05-profile-20260914/phyai/.venv/lib/python3.12/site-packages/yaml/_yaml.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 2700272,
+      "sha256": "edc51c14c75bd17789a97020a8472e051b5adce1a7667d63edc27e4825c23cf2",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1",
+      "bytes": 203968,
+      "sha256": "f572bd122e2b3b14d2f9d8d4345e1351fd9fbf26f9402e3e42ef36b65f833411",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libbz2.so.1.0.4",
+      "bytes": 70504,
+      "sha256": "89a72a9874f39034ece340558678398522a05d143541659b7dcc1f7b8cfbc145",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libc.so.6",
+      "bytes": 1722920,
+      "sha256": "2fd7c8f96a208532befb77cec1cfee8a08217a97b77d8eed382537fa6cc6e72c",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3",
+      "bytes": 4597928,
+      "sha256": "90b9521a9b393f57a03614adf6f86ab12c31483bffa74ceb385352da5af788f6",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libdl.so.2",
+      "bytes": 67440,
+      "sha256": "6726df9a1328c8f61ab561e72234800a59554806d1bcd78786a04ef8e3685a67",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libexpat.so.1.9.1",
+      "bytes": 198712,
+      "sha256": "f53b44564070acc56dcae4af78869a7c1338a9a818b1a71015afd388f23c66bd",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libffi.so.8.1.4",
+      "bytes": 67944,
+      "sha256": "9dd873a938c4d7df76912d01f6a28aa4aa73d583bd20485a0dbfe5aa9673a191",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libfribidi.so.0.4.0",
+      "bytes": 133200,
+      "sha256": "f25617883b0c10df0f143174c49454ca61c571a1051b5480070341223f95fbdb",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libgcc_s.so.1",
+      "bytes": 133696,
+      "sha256": "1a8c3655af0173b4dd4a3444233778098f2e1a4c33bcc65752f3342f9eeae9a5",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/liblzma.so.5.4.5",
+      "bytes": 198584,
+      "sha256": "cb4d37d810d354f1c3be46bd2897ba47c9f7388da7e6470a79e3accfa8e81f41",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libm.so.6",
+      "bytes": 591800,
+      "sha256": "ac92dc80c7d902e3852986e858ba682a981c15a12ec0e163bd4d56dde9b3dd6e",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libpthread.so.0",
+      "bytes": 67440,
+      "sha256": "0d87e0528f5f7fefe091d92d8779b2cf403d2a043e5a10aa5ec1138afd26b3d7",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/librt.so.1",
+      "bytes": 67512,
+      "sha256": "03f523a621ea63aa8f1b746f24519f1822a1d71e0a5423a37b5b11de11db0523",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libsqlite3.so.0.8.6",
+      "bytes": 1526192,
+      "sha256": "43ba1659a6113bb4360f4a6da9e465bca6403d7d1f376015d5a57901ee5639b6",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3",
+      "bytes": 737192,
+      "sha256": "ff32868c17ae1f3df951839604e7f8e022c06c938e104106a0833c80f86a0f8c",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.33",
+      "bytes": 2633224,
+      "sha256": "3f0d3c8aa8284c6d268e3f6984f43e5905ddb92d695db9571fd762e8eac3ad5c",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libz.so.1.3",
+      "bytes": 133272,
+      "sha256": "170380b4e7ab28ec86eb090b48df90f84089392cb72fecd5067e5b7a4dc5239f",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libcuda.so.1.1",
+      "bytes": 107345008,
+      "sha256": "15d310fa78dffd5f0df9f912f298b58291888bea7125fe69820e1c1456c7ffdd",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvcucompat.so",
+      "bytes": 87872,
+      "sha256": "55ad9b85ae7e0ea82dd37d140ef9719df08b4be70d8973143519824766ad42ac",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvcuextend.so",
+      "bytes": 207344,
+      "sha256": "a13e202c23d888183d2efff1d4044ca9617db8a9bd51aa93700f685357eda4d3",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvidia-ml.so.1",
+      "bytes": 2201824,
+      "sha256": "0fec9cd1a6b56d42b7e1d7249e4d46d03ae3cab6187d20fdb0189a1c652bced2",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvidia-rmapi-tegra.so.580.00",
+      "bytes": 290080,
+      "sha256": "e6ead0a5689120a1a241adb2a076f041eb50a09f7affae03716cbc7cdca9864d",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvos.so",
+      "bytes": 133648,
+      "sha256": "169991ccb743ce3fbe1776ceab525108d3572a221c0420cbf6c35c4e459771a6",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvrm_chip.so",
+      "bytes": 67848,
+      "sha256": "613ab56606bf77d9c6af32977d6c78d3de816161fd5c412df1fd1d02302078cf",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvrm_gpu.so",
+      "bytes": 461344,
+      "sha256": "41d6a1ea1e095fd61a347003166e663dbc3cb8c16ef5eaed3a723974474ebfb1",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvrm_host1x.so",
+      "bytes": 133296,
+      "sha256": "0abe874cede07dfcbdbc4c1a166009f6d6faa6d26ff4b35cb6f36fabd2853b49",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvrm_mem.so",
+      "bytes": 68248,
+      "sha256": "f2cd1c2fd5cf059b04fac4909bcf03e49829cb472c2c58ffbce7ccea7a1301db",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvrm_surface.so",
+      "bytes": 207760,
+      "sha256": "7eee5026d7a25d15d10af230e4f73689e0769a7347cdea38063cf812aa7c672c",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvrm_sync.so",
+      "bytes": 67784,
+      "sha256": "1c41ae157d6dadf0aff485973109ea833fcfa43bc09f283d8c51863bb3663b5c",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvsciipc.so",
+      "bytes": 133384,
+      "sha256": "73554caa5e451ee8b3d36b9ba668f0f9a338bbb3983a43f458f7d06df47a99c0",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvsocsys.so",
+      "bytes": 67792,
+      "sha256": "958e9105af5a35ad9ca3d8c9fbdf14dcbbd89a672cfcd6831de22c1a59194518",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/nvidia/libnvtegrahv.so",
+      "bytes": 67416,
+      "sha256": "5a7b9ac30c94383468ec78b2001bef10eb4b7931e450d59635bdca091e8da63e",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 73184,
+      "sha256": "f312460195da01438d9ee61f219f7accd06c55ee4a202bf6eb398d259a7bce45",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_bz2.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 68688,
+      "sha256": "842e0e9699327cf0be07c0f1a32ef1de50917e950a5303eaf18fd44985441dd2",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_codecs_cn.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 199048,
+      "sha256": "c41347cd5771d5ba5016a5a4dff2afdb1a5cb08bb3d2bf710676901a7f0c5db9",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_codecs_hk.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 199056,
+      "sha256": "fa3aecb01bb224f85b5a7692a9c3a1e1430e7a79735a1e7b64559598c48961a1",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_codecs_iso2022.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 67912,
+      "sha256": "365ff94c254e2e8ee8541d4714ed2de5779f77a2ed456de9c6b6ca024160c3c4",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_codecs_jp.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 330296,
+      "sha256": "c0fa5a55023dba66975d634a9f221d5c7afc19f034b6572256147b8e18c02d7d",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_codecs_kr.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 199024,
+      "sha256": "deb6a25eb371fbc95620242b97c07601618e9050da0f807040610ee2883e0d70",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_codecs_tw.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 133464,
+      "sha256": "181bd28c511ce08415451d1ca9cbcc1c4729377c2f80d3d9d0650f4533d4793d",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 67528,
+      "sha256": "9ac2a991519deed081a62c2b85491968fe567cc1600fb356db5230a18d07db99",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_ctypes.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 145728,
+      "sha256": "01cb1dca44aa92bfbb7fa2621ab20a9ba2be758204531881f45428663ddce2f5",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_decimal.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 405376,
+      "sha256": "af81a3ca30156ccb46d2c60b31603b50764cd6543203aa483f8e1254569ced7d",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 71800,
+      "sha256": "ea8f2ffa90da8c315029115b5381e435600a4fe6757abebaf7437321f3539a69",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_json.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 69112,
+      "sha256": "2e5630ea00b90ac280136b9e601a96fe4de59b699dfe2433b5ab1f545bf54836",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_lsprof.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 68600,
+      "sha256": "ab7b8c0444ae04d51d53803aa1b209113149b429112b8ff77b8fa815f3cd3a44",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_lzma.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 69352,
+      "sha256": "f2d22de86ce842b30e0a8f5bd8c917b9b7ab6f88af547eff8df07cec64b9704d",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_multibytecodec.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 70576,
+      "sha256": "5689bb7f2b45bae2b8fec520fbc4e1c7020c64deae28916f824748773a2d1205",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 68968,
+      "sha256": "902a4f12ba6241c78e26efa877e8bc1fcd1bf80e9afcbf4fd281bb497a7f0d10",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_posixshmem.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 68024,
+      "sha256": "5c32209b0f34d3cd6274766cb38a00c3951f6969b754adaf2ea072511a55228c",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_queue.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 68496,
+      "sha256": "09fc7b079361cbe4752d47c407ebf954c18c581d25f36a5586fae5fc28ec6a72",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_sqlite3.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 139912,
+      "sha256": "6de53d9dde658a0205a8d510407a433b4a3ae4c7083d2e0c4671da53fe26a30e",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/_ssl.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 233152,
+      "sha256": "6fd04c0dcc5c2df830ce9a80ac5cfee5da7c7fe478c5c937fb3868b6036c71df",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/mmap.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 69152,
+      "sha256": "cb8507f39d29dcbfeb525e5e0519fba8ae389aa5a3f6e93909ee3235b66184e9",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/resource.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 68288,
+      "sha256": "b2b96b19babfbb05285f7172b908388a6cceaa838e82d6c0237af7413c2b5c54",
+      "provenance": "mapped in /proc/self/maps"
+    },
+    {
+      "path": "/usr/lib/python3.12/lib-dynload/termios.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 72112,
+      "sha256": "e0987c1d716b6cef500ba931b3665cb29a173671ac7f06d618346d76a670126b",
+      "provenance": "mapped in /proc/self/maps"
+    }
+  ],
+  "generated_cache_inventory": [
+    {
+      "path": "$TASK_ROOT/cache/triton/23UIUYXDDFPCLGV6BOBIWXMABLSARZRYWLKPPUXEYFMUBEGUOMPA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17792,
+      "sha256": "c1528e03ba61845acfd081238d63ca82411559cc9000f3b49e5055a33cc3cb79",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/23UIUYXDDFPCLGV6BOBIWXMABLSARZRYWLKPPUXEYFMUBEGUOMPA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9583,
+      "sha256": "b2073bc5066142d20aef3f113a2676ca5ff8582c8826e7e13941093631c889c0",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/2PPHWVNLNZVO6NDDL7WXCJY6PL2UJJWBBAEOC2C3LJUXESZ4DEOQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17904,
+      "sha256": "5bbafa79d422abe1c97d1d935b74a9b27cdb99523149247df8eaf3a86b512375",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/2PPHWVNLNZVO6NDDL7WXCJY6PL2UJJWBBAEOC2C3LJUXESZ4DEOQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9611,
+      "sha256": "764aa50307f8a32152656b339da0b7a018e53299fafdd9ef0be1206b5d6c8f67",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/35YVJOF3VFEDVLC745BHJZOIUUCWWH6SCQBDL5SFFIK53WPXWVHA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17904,
+      "sha256": "734cecb9ab1faf7516479263fbecee4d4245f882f4ea45f444ae10daa3f08e79",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/35YVJOF3VFEDVLC745BHJZOIUUCWWH6SCQBDL5SFFIK53WPXWVHA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9613,
+      "sha256": "61e3c8d32bdd2e1938bb7d5f466756c6f38f2ec57aca44ff83136cc82a6eb172",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/37U3S4WQLOGAXJEOEVMWQAFR6PU3BVDWQLBYWITPC3UPKLXSJAPQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "ddf8e59a5cdaa43e52e2424a2a6e347ecc2c6c488d1d45d5a5c5b76776fa5e10",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/37U3S4WQLOGAXJEOEVMWQAFR6PU3BVDWQLBYWITPC3UPKLXSJAPQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9607,
+      "sha256": "82e564ad05dbb6b3bf918294af8af1097e3b2c5c8866a77b3a513cdc20e41902",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/3DPRDWLLUI4YS63P6APD25Z7FCCZ3BTDYFKATKRXRVZXPANFIWZA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "6663a830cc8872c4bd3ce5aa743b80618c5e5ee4a5d0439ab3631662f218106c",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/3DPRDWLLUI4YS63P6APD25Z7FCCZ3BTDYFKATKRXRVZXPANFIWZA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9607,
+      "sha256": "5644334a8ca089ad2087f6a2f78316af0aa72f6cc46439a243d0666a087bbd1e",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/3HFWZFHAYX6K5S56ITAZQ2UINIFR5AHQRUU6RBQDNK2RCEH4UG4Q/__triton_launcher.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 71776,
+      "sha256": "c5a362abd8875b547f15e3e5d8937d52414564e256ee106beaa1552a878d7ba8",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/3TJJOBZRAKQGSGTSGWO5WHUAJVD5IB5PXX7LYAIH4N7IOEHCT4NQ/triton_poi_fused_cat_3.cubin",
+      "bytes": 16888,
+      "sha256": "1d45299c5b8b21f4062149fbd45bf94a74c8601969f8132d11d4036a55a3d01b",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/3TJJOBZRAKQGSGTSGWO5WHUAJVD5IB5PXX7LYAIH4N7IOEHCT4NQ/triton_poi_fused_cat_3.ptx",
+      "bytes": 11631,
+      "sha256": "c25213bcb47642e5c8310ca8575dd97ee471c224dc4b0bf75d5de91e9b0ca74d",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/3X4D3XOT7KXTGXIPBFUFENBUFLQGIDWK3K7SPGANYZFMAU4JXFEQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 18176,
+      "sha256": "b776f4fef77750a4f48e334d7524040da8e18438c653bc716d4b85ae13064e19",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/3X4D3XOT7KXTGXIPBFUFENBUFLQGIDWK3K7SPGANYZFMAU4JXFEQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9675,
+      "sha256": "986852db2805cc4f079b91dea14b4b35d7a8441a110bd300e2173d810a9cc20a",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/425DVFE4UTHIEFEUMSGFKVNER2ZN2SPNXF6R45D4VU667PN6NMMQ/_masked_embedding_kernel.cubin",
+      "bytes": 23640,
+      "sha256": "7e2f64eda0c46ee3da36e6009460331a092288664997f69b8dcd9d5c20d505f3",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/425DVFE4UTHIEFEUMSGFKVNER2ZN2SPNXF6R45D4VU667PN6NMMQ/_masked_embedding_kernel.ptx",
+      "bytes": 14367,
+      "sha256": "e5a03b8ef084622595453b25ffb784eb24ac6df9302847818f9b7b25d28d220b",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/42IZICRRZBTKJYVIAKQGIHI7SJ7ZMU6E2GXM6DEEYPK23YLXHYQQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 18064,
+      "sha256": "ca5268193512efe1e54b79168d4876614b43cac26bcee2bbc2f3e14d23f8d55e",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/42IZICRRZBTKJYVIAKQGIHI7SJ7ZMU6E2GXM6DEEYPK23YLXHYQQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9649,
+      "sha256": "f1dde5997746aa602dd0a5069bb893cb0f38323335c413748c8640a49397ac5c",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/4Z7TRFKIW3BN6R2UXIUT5PWJBGGX6UVKSFYYTKVL7EUXAZRLDBNA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17792,
+      "sha256": "137e45a8974dc852c2f3d9b6b492956b1273614d570eeca368f817f1605210af",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/4Z7TRFKIW3BN6R2UXIUT5PWJBGGX6UVKSFYYTKVL7EUXAZRLDBNA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9583,
+      "sha256": "1d3d83c9ebb9f029e6a84c1e9f18f69a8df14e2bed41890949be0880952ad013",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/662IC7SG6QMN5ODAYOAM6PRLULCHBEURNGPGZ6LMCBHRSB3NV5HQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17904,
+      "sha256": "e4f3a383b86a2058a5f2af555a5f84657dfb70aa4596669fa9b4e1069b1f8466",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/662IC7SG6QMN5ODAYOAM6PRLULCHBEURNGPGZ6LMCBHRSB3NV5HQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9611,
+      "sha256": "315b459cd38f6780bbe895973f64190bcf18b79204756df4ae9f53b356e9a5a8",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/6WSEC5ZSTQ22DZRAODU2L77NETXXX6WASIYQ3YCJ4QEM55IBZIUA/triton_poi_fused_cat_3.cubin",
+      "bytes": 12328,
+      "sha256": "acf4f6229306bac2f1c52b37271f49ee210c8ab95bc1b592fcb9726119846d1a",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/6WSEC5ZSTQ22DZRAODU2L77NETXXX6WASIYQ3YCJ4QEM55IBZIUA/triton_poi_fused_cat_3.ptx",
+      "bytes": 8556,
+      "sha256": "d2730df2d2e1e787424259165f9326469a5f3d97189b428b006267f3e8c3372d",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/7GZT6LVLYLZ4RSIU7WVNQSJVKDOY4Z7SXWL457527KBLSVZ4TANA/triton_poi_fused_cat_3.cubin",
+      "bytes": 12200,
+      "sha256": "5ec9e8958a57b1e3886c51ce9c5318b5772473cd0ea0eff77da9af216f1c261f",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/7GZT6LVLYLZ4RSIU7WVNQSJVKDOY4Z7SXWL457527KBLSVZ4TANA/triton_poi_fused_cat_3.ptx",
+      "bytes": 8247,
+      "sha256": "8eaaceff35ba973f37ef5e2aa8bf319c0dd995dae6789e48720ccdebda4a9ec3",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/A2YVNBXHMZZJVTTNKUSYEDYCGS2M2MQXPUOYJX6M44ZXPS7IUJUQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "1181f00156162e723c3f94c9acd6e6ab8238acfdf38943efb8e8127a9ac6c310",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/A2YVNBXHMZZJVTTNKUSYEDYCGS2M2MQXPUOYJX6M44ZXPS7IUJUQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9610,
+      "sha256": "24fabb0c4de6b52c9566db9004f82f7b1f84e06279b7b12687b48346785644a4",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/A5UOWIBQYDYLGRJRC2F2UOHUVSV4SVLSWHPZJOQAXU333NSO4LMA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "c95c329af3c526c62908b80f58e60f994a140f9fc8a7187fac6b5ed1bf48db40",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/A5UOWIBQYDYLGRJRC2F2UOHUVSV4SVLSWHPZJOQAXU333NSO4LMA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9607,
+      "sha256": "24e40ccd8ca144b2e09a9c618d57a4f44980b540585abd48258f9ec1e284f30a",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/AGQNQC4NAUTGPE2TQ5IF6WUW5FGFRZHSJZW5XF52FBRUNYJYBGNQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "fc1973e63bad582cb300464c84b7d8973ff8bb854c2b0cfcd18ed8c4236743e8",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/AGQNQC4NAUTGPE2TQ5IF6WUW5FGFRZHSJZW5XF52FBRUNYJYBGNQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9611,
+      "sha256": "068ea84afa29ddc239e68da84c2b9903e11065225bd84fbf2c675ec6c7f9607f",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/AJBYDKEM5WBTEH7FIH6LB7UV6KYGLGXTYUJSUFZ5BEEUJ3H7WR7Q/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "8328356d8c68cd0f555fe0505c88231531fb21ac0d575c0bebf269046630c2fb",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/AJBYDKEM5WBTEH7FIH6LB7UV6KYGLGXTYUJSUFZ5BEEUJ3H7WR7Q/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9607,
+      "sha256": "21ced38a45719fbd309b6561dbc6e52e005e2dd68dde900388fb5a1aff4d58d3",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/BDA36BQKPFCLYOKTIHLVVHU45CUBJWYTJGY7H2ZC7FIUPPI2Q2XQ/triton_poi_fused_cat_2.cubin",
+      "bytes": 9336,
+      "sha256": "5500e746c791532156492b510b77963aa501ff0b772a4ff37c74647e48578bd9",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/BDA36BQKPFCLYOKTIHLVVHU45CUBJWYTJGY7H2ZC7FIUPPI2Q2XQ/triton_poi_fused_cat_2.ptx",
+      "bytes": 5476,
+      "sha256": "c0822381637fc8160c06d61decc8fcabe0d2d4bbba56413a36bd8b71781d2f5c",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/BNWNV5MG2NUDBHLPCS2UCBYZLD6HMD3PN7TS7XIIQ7PZ5WAU4EGQ/triton_poi_fused_cat_3.cubin",
+      "bytes": 16632,
+      "sha256": "ec40a96c35dc76edeec7d25b3922e11e886132bbbfa517063977ec1e781c2d26",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/BNWNV5MG2NUDBHLPCS2UCBYZLD6HMD3PN7TS7XIIQ7PZ5WAU4EGQ/triton_poi_fused_cat_3.ptx",
+      "bytes": 11556,
+      "sha256": "aae5230dfb071edf53b3d40a477a58f42bc02fcd3c3a9f3bf42c5a4518a51d35",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/BRJI34HCOI2OH6KI3VOOMWYLBQXRTQRK37KIRZ4KZCXORK7HDJDA/_masked_embedding_kernel.cubin",
+      "bytes": 24520,
+      "sha256": "b0675b54906fc29a3990bdb87b0b4857763e7acc23009338eda2e2555eca4b31",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/BRJI34HCOI2OH6KI3VOOMWYLBQXRTQRK37KIRZ4KZCXORK7HDJDA/_masked_embedding_kernel.ptx",
+      "bytes": 15221,
+      "sha256": "2fe0fa389d9bac51c18a12a3036403d77017136e307306246cb4088564bff966",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/BZ7DEXQM7Z3Q7CFL2WJDRFDT2TUYRQGRVTCRZDNBEWEOA62ONM7Q/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17792,
+      "sha256": "4748d3248b4faae1edcc955b5edf0d2e4096f230a200aa17a6b1643e628e333e",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/BZ7DEXQM7Z3Q7CFL2WJDRFDT2TUYRQGRVTCRZDNBEWEOA62ONM7Q/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9585,
+      "sha256": "6a95275d81c36d3513a0f3606f4c531bd26e82bb59db542f69f2523e146a5df3",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/C3LU5TFM7PKJZMTH4B7Q34MFEW4SQRPZ2O4AQISP23IUPKODDKXA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17792,
+      "sha256": "5e2189a22eaf67d4eb9e51f7b6ee26dac89459ac0ab4ac6b6583fea9abfb0c03",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/C3LU5TFM7PKJZMTH4B7Q34MFEW4SQRPZ2O4AQISP23IUPKODDKXA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9585,
+      "sha256": "a4ccd0029c639f73b63ed8c5eff626b878b7690a7e8736720f480d070eb503a8",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/E4EMXMJP5ZU6WSXXMPNQNPQOQUBST5ID573K2QJIFGVZIOGMDNEQ/triton_poi_fused_add_cat_mul_neg_slice_0.cubin",
+      "bytes": 13032,
+      "sha256": "73cda5d746dbf8d3180f31fb9fc7f1b99bf5d04f17e4c2617460a4f4bb2ade59",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/E4EMXMJP5ZU6WSXXMPNQNPQOQUBST5ID573K2QJIFGVZIOGMDNEQ/triton_poi_fused_add_cat_mul_neg_slice_0.ptx",
+      "bytes": 10004,
+      "sha256": "6ed233c5328751956ba167bb764e2f41ed79e8e399d4f01f41186114a9315fb2",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/GADAFUKXOFZHYMFCKIPQLIZVFM52TFS3JOYN7HKV2AH3WOWDE5GA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17904,
+      "sha256": "305cb20f2c5c6a9b9525707fdbe232491b5705b49b7babfb80766528ce6e3d2d",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/GADAFUKXOFZHYMFCKIPQLIZVFM52TFS3JOYN7HKV2AH3WOWDE5GA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9613,
+      "sha256": "8d02de93f3e987ac0e83b49874328ae0b894ddd2ebb5b69fc98ee251de537857",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/GMBC6Q53WNBOQECYY3ILUULAJKRCFWRSFH5FXKCXJRI6PGECBUGQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "33fc2b38eb111809f2653f25c221a98fcc3cdeef32a7479f65d2fd20e75c99c6",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/GMBC6Q53WNBOQECYY3ILUULAJKRCFWRSFH5FXKCXJRI6PGECBUGQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9604,
+      "sha256": "fb8347cac577aaada88fd792484adc462adfb13c726d2f9924d558c25c7d8c0e",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/GMQR7M6YYJG23R4JZ4N2LJAUWBTVQH7TDN44TPPJ3UUINBEIZMKQ/triton_poi_fused_cat_2.cubin",
+      "bytes": 9496,
+      "sha256": "1c3a71200a68ed5bff88cfb53e3cd6f4c496160fbb6015180ed522ff090cb781",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/GMQR7M6YYJG23R4JZ4N2LJAUWBTVQH7TDN44TPPJ3UUINBEIZMKQ/triton_poi_fused_cat_2.ptx",
+      "bytes": 5539,
+      "sha256": "6734e8d89e3a320d710480f8be9a96837f63d7a913f6163d69503e4c0a3cbe4f",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/HCWERFOMCOW3R3YEKVHVHBGPT5HZXMRITGWZ3QNWDLJ5PHAGC7VQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17792,
+      "sha256": "e0c61a56d63842a9ad03bfd03998774913cb53322c4fb671c519e50a84cf5140",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/HCWERFOMCOW3R3YEKVHVHBGPT5HZXMRITGWZ3QNWDLJ5PHAGC7VQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9586,
+      "sha256": "b9ad61ff678c4f23ec118f2bfbadef116fb379e5eece9f8149a2ad7b2efe7d2d",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/HRIUPSLBXVTZOQJXUA2QBSG3ZUUGXAY5SHTXFREHFUDQ3L3E52FQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "4d52748078fa5431435c1b78d9ca50b55ac99e72b52a8aa76ef3a7f289703e8b",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/HRIUPSLBXVTZOQJXUA2QBSG3ZUUGXAY5SHTXFREHFUDQ3L3E52FQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9605,
+      "sha256": "1bae72ce420fa406c176681c95935c1dd20192a5fbacdbffd76296a205798822",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/IXVBPJJQWHQ3ZLUDVQ3Z35TVH2UOHZ7Y54ER3XQXY2VMVV2JXWVA/triton_poi_fused_add_cat_mul_neg_slice_1.cubin",
+      "bytes": 14296,
+      "sha256": "141eac544bc97ac50988151c2fb49fd900a098c179fe5097de998e26921038df",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/IXVBPJJQWHQ3ZLUDVQ3Z35TVH2UOHZ7Y54ER3XQXY2VMVV2JXWVA/triton_poi_fused_add_cat_mul_neg_slice_1.ptx",
+      "bytes": 11457,
+      "sha256": "054831f249034ebd144b9bab764574ace1c6f10dca4968f41a562749ad67f75a",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/JI2EVSUU64WEISKR33HWQIKEGICQE52BSE54HZCQYXZRR2CBXQTQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "29225ee2a87291b497534100f39a1b2bce206e2b9775324ad8be5653cc09908d",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/JI2EVSUU64WEISKR33HWQIKEGICQE52BSE54HZCQYXZRR2CBXQTQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9613,
+      "sha256": "b85805e77a4ce2c35290824d68ebfee00441afe1aeda06f63155c943ad1f5132",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/JMCBRHEMFEZBCOR3ILTYTEJZSB6VTHJ7TGINVABNYWN5RRSIAHUQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17904,
+      "sha256": "cb15520112d0d5a5d0d8357e9f26a5d16f3ebc7435d6acf12e48f1896d9db877",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/JMCBRHEMFEZBCOR3ILTYTEJZSB6VTHJ7TGINVABNYWN5RRSIAHUQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9613,
+      "sha256": "cc847fb2f73b8833f641881efb7aa4ab187c56b126605ff8942ea61595fac65a",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/JYE6FXY3JUMK2TJUFRYEG7BUSV36TRQP2GFJANVTOUQ227X4KVSA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "4f407beb40a074858b2a3130706725c1d370d4ff2e27f259c1aa0fd33d0b8272",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/JYE6FXY3JUMK2TJUFRYEG7BUSV36TRQP2GFJANVTOUQ227X4KVSA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9609,
+      "sha256": "6dc5d388c6cbf5ccc7c9b2da7a99a19c9cb3c1cee268d5719ba887f8e830bdce",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/KBXU4KKLOXMEOKLBX3JB3CGC2COKRGLUMZSJDYP4Y24RB3UUXVQA/triton_poi_fused_cat_2.cubin",
+      "bytes": 9176,
+      "sha256": "c859d6a2a087304d34a0ec8a5453637f4889e5a3084504ae51e2dc3412c13ebf",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/KBXU4KKLOXMEOKLBX3JB3CGC2COKRGLUMZSJDYP4Y24RB3UUXVQA/triton_poi_fused_cat_2.ptx",
+      "bytes": 5422,
+      "sha256": "395dbcb53c0a9ffad7d171ce7e694e3a11a82f428efd517c702c86986f63832c",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/KKNXMZD5YMJYVM3DWGPX47LDHSDQWQIIVKJRSBTNKAP6XYM7MRXA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "8ff4ac6b0b17e595bd92878d66b49d9992b6688c01542fcf6a039f920fc63c11",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/KKNXMZD5YMJYVM3DWGPX47LDHSDQWQIIVKJRSBTNKAP6XYM7MRXA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9607,
+      "sha256": "aad827b1000947c699725ee061d7cdb3a413b68a00d3030eee9b09d0da6075b4",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/LFTUCSILWV4EA6M54FQK2PJER3LZNVMQZDSDTKEXKWI4TR6ALACA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 18176,
+      "sha256": "22171c17cb6e0bc1535eb64541e85eb19fe2be9d21881e3e75da49fbc7b0ddc9",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/LFTUCSILWV4EA6M54FQK2PJER3LZNVMQZDSDTKEXKWI4TR6ALACA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9677,
+      "sha256": "92696434cad8c79e8035d46b030b953147f7213841711e96380ec9edd5aaaebb",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/LX572IS3C6VHG7SYWGXO7ETVAU4GN7AARWX3OFRQ3DTWMMEJO46A/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "9e7b9b2fc75af550dce3740cb97618d03d2ee99336e83dc8161794edf5a35e3b",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/LX572IS3C6VHG7SYWGXO7ETVAU4GN7AARWX3OFRQ3DTWMMEJO46A/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9609,
+      "sha256": "9fc74d362caefbf3731411c839adc2913a1bce8902e1156109af5d701a7eb4ba",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/NIVKB3TGIONIRAZODYER24UAAJXVOBFJRP77WCE4ZG72SKZD7DCA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "f39b58032b33f8679cf9d6f5051cbc4e1850fe8ddec37635c604fa273ab37b22",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/NIVKB3TGIONIRAZODYER24UAAJXVOBFJRP77WCE4ZG72SKZD7DCA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9611,
+      "sha256": "2ae68e70f3fc8c4568524d64347489ad42c641b4d9aba3ce52651aee24a987a8",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/NZHNDYQ2C6HINRKGRRQGZ4PW7ZZ3QGFETDPOV5UL7DWUCA45SDUQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17904,
+      "sha256": "17c0f6d37b8fce7328424ac08f5b34ab961d018b0a19dfda7aaa679a519ee245",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/NZHNDYQ2C6HINRKGRRQGZ4PW7ZZ3QGFETDPOV5UL7DWUCA45SDUQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9610,
+      "sha256": "f25efce5a7a0f4117392993ff41edcc5647371788725913028405f9a4096c8b4",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/O5QEU5TG75YHSR3DOU5TBDZN5YBELEBRALK24X4N5EV3AKFDD43A/triton_poi_fused_cat_3.cubin",
+      "bytes": 15736,
+      "sha256": "954f23a872e3fde3e77c4ab18d8d5ff52ce95b3fc961ac305decf41e8c6c3e61",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/O5QEU5TG75YHSR3DOU5TBDZN5YBELEBRALK24X4N5EV3AKFDD43A/triton_poi_fused_cat_3.ptx",
+      "bytes": 10523,
+      "sha256": "ab50c78bbfff3045a1353a790e0d2a5aa3e29edb2f7c9aa22adfe94ecf8ce3d3",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/ON2Y2PSMH6N5SRHPKO26JF37N4E7SQKPOF3ONEIHTY3IQLKIGBCA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "71325b84f4356eafc39d05d5de6f8eb01b626e1511c13cedf0596b003a494cc7",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/ON2Y2PSMH6N5SRHPKO26JF37N4E7SQKPOF3ONEIHTY3IQLKIGBCA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9607,
+      "sha256": "02a591215c2d2c99ed71e39c2072908a289f5594c859585ebfe7d66d488224d4",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/P45PYHTOVUHZVZ5DZBYL5QY2NIEM4SVYJ6U7YJR3UCPJ6XH2AE5A/__triton_launcher.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 71776,
+      "sha256": "23b3c188482aea0a91d8a3b84026ca4f46c4826cf5daaac774a3da3485ba106e",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/P4ZPM5RR3SPBTOR64OUWLYFC7QNSY3SEXZBDPJBUGVOWIODQX2OA/triton_poi_fused_add_cat_mul_neg_slice_1.cubin",
+      "bytes": 15912,
+      "sha256": "886163d52797f483f705e270d261a4a4c03292fb81dc217001a01cbf695d8810",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/P4ZPM5RR3SPBTOR64OUWLYFC7QNSY3SEXZBDPJBUGVOWIODQX2OA/triton_poi_fused_add_cat_mul_neg_slice_1.ptx",
+      "bytes": 13369,
+      "sha256": "22e626996393ff3bbb0b19be033f0558d1a08d5c2b971843d05602010ed0f8c6",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/PWJFIWVCE7G44OXWMIHMED2M7M346KP7WLBQK34G4RQYJSMNHJHQ/triton_poi_fused_cat_3.cubin",
+      "bytes": 12520,
+      "sha256": "51e5c23c8a45c45531b0551a32f3e25568a0f2f977585b7b80e32b3f3b0defb2",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/PWJFIWVCE7G44OXWMIHMED2M7M346KP7WLBQK34G4RQYJSMNHJHQ/triton_poi_fused_cat_3.ptx",
+      "bytes": 8551,
+      "sha256": "6564fd044c59ef3b85e3163a4eb8df6dc417ad2e8ff4cdb21f0998e075feba85",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/Q4FP7CNENHGKN54RRBW2PRU4CY53VFJFXJIFPXR4LKDV6FTKKCRA/triton_poi_fused_add_cat_mul_neg_slice_1.cubin",
+      "bytes": 13496,
+      "sha256": "166cfd515a061f3b3ab59f080e242c1f8d75a383f505b0d422d5ca225f317bc0",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/Q4FP7CNENHGKN54RRBW2PRU4CY53VFJFXJIFPXR4LKDV6FTKKCRA/triton_poi_fused_add_cat_mul_neg_slice_1.ptx",
+      "bytes": 10494,
+      "sha256": "4d0bb5a6ef44052f57e1dfefe570be7923faf9d68ace3ddfb522e7d2473d8f18",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/QA3R6VDSKKG4E2TPLEUFIOTRWLRLHJAO33G7VLVR7KGF7BEW2NBQ/_masked_embedding_kernel.cubin",
+      "bytes": 23032,
+      "sha256": "31db51e271e51b61c5953b03aa09315580f5dc4c2e2c744273b37cf3c3a7798f",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/QA3R6VDSKKG4E2TPLEUFIOTRWLRLHJAO33G7VLVR7KGF7BEW2NBQ/_masked_embedding_kernel.ptx",
+      "bytes": 13791,
+      "sha256": "5807a4c2cb0af4447d78d9a985ae8dcc6603ad4ee75bcf4328dfef12d5956cd1",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/QGACXNGAKXTXMD4VD7TLQJTEVWAJMIM4GENHEKCUV72CF2V5ACLA/triton_poi_fused_add_cat_mul_neg_slice_0.cubin",
+      "bytes": 15224,
+      "sha256": "de2fee298aea439f1f962e588673ec93d4dc59e9f97fddc3e1b02b4a47829acd",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/QGACXNGAKXTXMD4VD7TLQJTEVWAJMIM4GENHEKCUV72CF2V5ACLA/triton_poi_fused_add_cat_mul_neg_slice_0.ptx",
+      "bytes": 12883,
+      "sha256": "bd81d43e74179de9fc84bc92a43217e65741e1cadc8422c2ea4cab5b5a086c73",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/R2OVJK7OH7KUZRAN65R47LX3U5FZKLU7LEUX5YHUSG6NR64PZZMA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "6f4aeba9484db95c475476329a790047102ebd94f99ac5005d468325f79df732",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/R2OVJK7OH7KUZRAN65R47LX3U5FZKLU7LEUX5YHUSG6NR64PZZMA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9613,
+      "sha256": "8fbb97c7554b3410e54b980400156741dd5f67e0b703530176260a33592ef6b2",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/RAZYNSRLFC5ONONGQA5I4RCR5WCH3P2H4TJY46PYQHZNDHAFRBUQ/triton_poi_fused_cat_3.cubin",
+      "bytes": 12312,
+      "sha256": "e5ac485ead96eabd812242cdb17a25c17d47bb54f048f446c53afd7e05b63436",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/RAZYNSRLFC5ONONGQA5I4RCR5WCH3P2H4TJY46PYQHZNDHAFRBUQ/triton_poi_fused_cat_3.ptx",
+      "bytes": 8475,
+      "sha256": "3ff2df8add4ae8562a9272a647d6f07642e86a62ddb3667af7d5d7ba54478e5f",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/RMXPMKUVKRTKYOOCYJG7ZAWLIPRPRTB2P43GZSTAZVW75FNGP4RQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "442f02f38138f2720fbcd6325551caf30715057bcd8aa6b295263d36d4264fdd",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/RMXPMKUVKRTKYOOCYJG7ZAWLIPRPRTB2P43GZSTAZVW75FNGP4RQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9609,
+      "sha256": "f031fc5ee96904ed2b39d5e8980ad8e5cb384f294a07a22e68c9c72140f963b3",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/RVM5IWZIBNQVMCDGLLNS7OPTWQ6UQPRNRLXWIXA2N4DJ4YF4BFAQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 18176,
+      "sha256": "6ff03642e59c0aa2d91e552b05c322c0cd085c05cc0367749e6a5a607157d64c",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/RVM5IWZIBNQVMCDGLLNS7OPTWQ6UQPRNRLXWIXA2N4DJ4YF4BFAQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9675,
+      "sha256": "c813ce6996817e0968ace9aeb84ee14ac2464877f8f263338748f7441b0c91a2",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/SKIFFNT3TAEUJR4JCYPSDBSKV6QVQEHSIS4NFFOVJA4FITCFCO7Q/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "d0e6f35abd2563048bc181f3631ff05176b2b47196f79ef0f3a71c844859734e",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/SKIFFNT3TAEUJR4JCYPSDBSKV6QVQEHSIS4NFFOVJA4FITCFCO7Q/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9607,
+      "sha256": "217aeb5b9ec67298756659ac9702ab533178850d2deb210476691eda37925b24",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/SQR7W3LNWTYPSCQEJ774R33MU3ROVFSLC72P7AI4JOKEVVW77ZIA/triton_poi_fused_cat_3.cubin",
+      "bytes": 18328,
+      "sha256": "c2ce3b1f35bf5023e6dbee73092696edef46d5eeccbcfe7556fbbd77ddad5524",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/SQR7W3LNWTYPSCQEJ774R33MU3ROVFSLC72P7AI4JOKEVVW77ZIA/triton_poi_fused_cat_3.ptx",
+      "bytes": 12559,
+      "sha256": "9e47ea9305c966350c62e0510806a3765e88040f85d3abed65a3c6550ed09896",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/TPVTTPLYHEDPAQT3SYGYNYPZNCEDWB4T5N5UA3X7WV63CNPXB2MA/triton_poi_fused_cat_2.cubin",
+      "bytes": 9336,
+      "sha256": "79cec61a7b0e2b3b016671763498388d98e936bdaf871d8abdd71a50790fdf54",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/TPVTTPLYHEDPAQT3SYGYNYPZNCEDWB4T5N5UA3X7WV63CNPXB2MA/triton_poi_fused_cat_2.ptx",
+      "bytes": 5476,
+      "sha256": "64acb999b2c8b6dc7240db8fc03b9f8e44122614eb6024df4b07676b6f1a88e3",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/U7QQNOFQJK5JBQWT72MFKWS5CC42YAKF6WWUKZB7FZTPZH5XVJTQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17792,
+      "sha256": "3c07db4ca253ca1c6ff0c3e7c04132acc4b1b227739dbd12416338f615719f6c",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/U7QQNOFQJK5JBQWT72MFKWS5CC42YAKF6WWUKZB7FZTPZH5XVJTQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9583,
+      "sha256": "21671523bef9b10589f4b8ce12c23dcef633ad0c92a80e6dab02d4ffe35c6eb5",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/UBSNLFAB4WVYHC2DRLYLSMT2O2WZRW6GXKF4SLEDHLSTOVSS5SOA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "cd1876206e8ac4fbe0a3e1d60aaf0a5d1384a51403cb3b56c595ce27335d0690",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/UBSNLFAB4WVYHC2DRLYLSMT2O2WZRW6GXKF4SLEDHLSTOVSS5SOA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9609,
+      "sha256": "fbac2d5e01bcc88940f4b3f2c6c9c52f7d00c658497b28fc9da70f9c8b4389bf",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/V4LUPXR5QTHDVK42FJDQBVVCCGXITELHDXJJY6ZLD2V64THFW77Q/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17792,
+      "sha256": "92063cfc27eb8cdab29003c666a65aca92edf32c65d494c94ec0bc624d0b15b0",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/V4LUPXR5QTHDVK42FJDQBVVCCGXITELHDXJJY6ZLD2V64THFW77Q/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9579,
+      "sha256": "8534a7bccab732e3cc160e17255a799f07c905bfee989098832acfe4877e7ca9",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/V7VNFFLQQ23ZPR5OIY7VSXZRD2MVL5TQMGYBW42MQHLPA6RUS3OQ/triton_poi_fused_add_cat_mul_neg_slice_1.cubin",
+      "bytes": 13496,
+      "sha256": "747af74162d18679c0333d10481bc4452e3a897bde29af324a5353d07a1a6cec",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/V7VNFFLQQ23ZPR5OIY7VSXZRD2MVL5TQMGYBW42MQHLPA6RUS3OQ/triton_poi_fused_add_cat_mul_neg_slice_1.ptx",
+      "bytes": 10490,
+      "sha256": "80b09dbbef2219b744b5d75df27f4e4db9837e1a8397df29798324e3af1ecb7f",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/VFQ3S5EACXFP54XNARXQBY4VR3TV6CBSGMQDQS64IQXJKKN5OC5A/triton_poi_fused_cat_2.cubin",
+      "bytes": 9512,
+      "sha256": "23b056bd763d0a7fde503a82798b4c067f81fea95af0f6a81e5ecb3c2c30f003",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/VFQ3S5EACXFP54XNARXQBY4VR3TV6CBSGMQDQS64IQXJKKN5OC5A/triton_poi_fused_cat_2.ptx",
+      "bytes": 5571,
+      "sha256": "ec469252c812d26a9e2c2fdee5cf67f4aa083aeee2cd6cb5f67d0a10925afa43",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/VG522HBCQF2GB4UWCZSNBC4TGQVYT5HUCBL7TZDQ3EBHV2FUUC7A/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "f15a98cbffe97e1396ce23fcff75bc1bdfe24e794a782841dc420eea6475ec77",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/VG522HBCQF2GB4UWCZSNBC4TGQVYT5HUCBL7TZDQ3EBHV2FUUC7A/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9611,
+      "sha256": "91e3917425dff2ae248178428c1d01aef4dac09c0f71d96091af117dc71597e5",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/WAQHSJZLPT4Q6EWWSQ5WQMIG6X3PXMOX4F7L4B2BU5JWUXP6BWIQ/triton_poi_fused_cat_2.cubin",
+      "bytes": 9512,
+      "sha256": "6922eba23e30fef87af72d0874016cae0b9cb25d226c0017c30c5a19e6f556d1",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/WAQHSJZLPT4Q6EWWSQ5WQMIG6X3PXMOX4F7L4B2BU5JWUXP6BWIQ/triton_poi_fused_cat_2.ptx",
+      "bytes": 5535,
+      "sha256": "85484f899d551fd36cba75fcdf6d79def9be9c7195eba12904d15a53bdb66b19",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/XHOM6DXOZIKMMLTTOL26Y4TVDNJN4XVAHHRR7TLP2MXGRSXTTDZA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17792,
+      "sha256": "bca70306948ee7e8e45cf75c360654a72b6f0e640b8f1229c70bee3e765dddbc",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/XHOM6DXOZIKMMLTTOL26Y4TVDNJN4XVAHHRR7TLP2MXGRSXTTDZA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9582,
+      "sha256": "782c76b5b3c0c3ccd8d1d1e85b5178c5dfaa4a48152d542d73287938b302ce31",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/XJE5KQCZA3NQ7IAXGOB2MCI55KRC3SBFMMRPI3JKLXSTYVW5ESPA/triton_poi_fused_cat_2.cubin",
+      "bytes": 9048,
+      "sha256": "30308e4aef574b1858032e8e1e274f9a88a77e5331156d926d07dce60f352814",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/XJE5KQCZA3NQ7IAXGOB2MCI55KRC3SBFMMRPI3JKLXSTYVW5ESPA/triton_poi_fused_cat_2.ptx",
+      "bytes": 5324,
+      "sha256": "3d4d0003346063c589d36b9ba47938950e94ba8d5d4b5c3942063ce543a695ce",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/XLHXXDLPDFYHJKCVFA5K3LD27VKDLCURTMICB6MZQ2FCPEFI3DGQ/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17888,
+      "sha256": "5e3ff03ab2f8a81f1f7d2be9483fe37f680cd85e87c47226907865e5ab4eeddf",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/XLHXXDLPDFYHJKCVFA5K3LD27VKDLCURTMICB6MZQ2FCPEFI3DGQ/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9607,
+      "sha256": "099fadc53e9adbfd1a4011abb1952990e476c4fede36f5248f7b2176b74eec15",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/XLWPXXHI52P2WFJQ3RS7QQCCQJUV7SLIZT5GKLWJAQ7QFAKPDGDA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17904,
+      "sha256": "415e3552cc1d4599403692ec3b75abee414fdb600070e17a0ddc5940443f125d",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/XLWPXXHI52P2WFJQ3RS7QQCCQJUV7SLIZT5GKLWJAQ7QFAKPDGDA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9613,
+      "sha256": "2a980598a834a29914791624dd23dfba38397152dde57689106cce0d0c214a53",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/XPDQBXUBWOMML5BDUWGIQQLIVFXASPJCFVIKSURMOCNRYA63R4SA/__triton_launcher.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 71776,
+      "sha256": "a29055878c1eae1735acb3fcdfbc4f15f4feee6a048c070da470126223c3c407",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/YK4VZ2BI4GMJSPC3BQ2UKVAY3EVEJ2V5Y3JAVA4MQ4AUGAW7YFUA/cuda_utils.cpython-312-aarch64-linux-gnu.so",
+      "bytes": 73880,
+      "sha256": "7f143ec7f4e73616bccf7eef4ea76af2fd7bf22b36ae15c4e292e6ef8c5fc589",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/ZKROLSKYMYSZZXRV5SLLMQHFCOTHCJYAJ3F45VRPPXBSGUOXTKLA/_channel_l2_norm_affine_kernel.cubin",
+      "bytes": 17792,
+      "sha256": "cf117521e0bc8708605db139cf4530ae6d0c2b636df07a61977805550da216b3",
+      "provenance": "task cache inventory; individual execution unproven"
+    },
+    {
+      "path": "$TASK_ROOT/cache/triton/ZKROLSKYMYSZZXRV5SLLMQHFCOTHCJYAJ3F45VRPPXBSGUOXTKLA/_channel_l2_norm_affine_kernel.ptx",
+      "bytes": 9585,
+      "sha256": "066a160d59d1ef715c94720091d6b423052f12b38a0d06f88bfb674f56fc5a64",
+      "provenance": "task cache inventory; individual execution unproven"
+    }
+  ]
+}

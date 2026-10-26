@@ -1,0 +1,74 @@
+{
+  "complete": true,
+  "gate_passed": true,
+  "base": "Inherited dynamic-v4 task solution/baseline directories; additive V3/V4 source overlay, full source archive also supplied",
+  "files": [
+    {
+      "path": "solution/candidate-full-port-v3.py",
+      "bytes": 1357,
+      "sha256": "daa4b9e64727c3e587da9e5e162cd3ba5324060f5d71a0a5bdde05f03d15b5d0"
+    },
+    {
+      "path": "solution/dynamic_lt_fallback_v3.py",
+      "bytes": 3878,
+      "sha256": "a51781fb0b86867d6851754292b6492b9bf6aa1438d154d945cccee08e574173"
+    },
+    {
+      "path": "solution/dynamic-lt-selected-v3.json",
+      "bytes": 2250,
+      "sha256": "725c6de679c46f67b52962d9d81764463818a157d543c0cc5034292726733f2f"
+    },
+    {
+      "path": "solution/candidate-full-port-v4.py",
+      "bytes": 2452,
+      "sha256": "9dbc3175c759b94ece437aa6e16536e3765a43d22f65b6b2814f148d279c6579"
+    },
+    {
+      "path": "solution/opposite_layout_routes_v1.py",
+      "bytes": 4536,
+      "sha256": "0683fe15759328f57d5e1d8680dd02aa8fd67db2bf1b60c4158549acbc3df16b"
+    },
+    {
+      "path": "solution/main-layout-selected-v4.json",
+      "bytes": 565,
+      "sha256": "8ea55cce403e11c7603603c09f97da274c630eca4f44095cce33f53b3834f589"
+    },
+    {
+      "path": "bench/dynamic_model_common_full_v3.py",
+      "bytes": 8997,
+      "sha256": "bf36a11ce8db4d7194f4d7e7394126fba484cb8501a10a36450211f1ef3be5cc"
+    },
+    {
+      "path": "bench/dynamic_model_common_full_v4.py",
+      "bytes": 8997,
+      "sha256": "f4f199899668f67c5e4fb5d59d62ad0133637c14ef4894f64c3de808cdb54e71"
+    },
+    {
+      "path": "bench/validate_full_port_final_v4.py",
+      "bytes": 2848,
+      "sha256": "65fc734625d54c1cc0ba606906252132d0629a16c52d66647327794d1d696c60"
+    },
+    {
+      "path": "bench/paired_full_port_v5.py",
+      "bytes": 6193,
+      "sha256": "6e0f7586e65d55e5adb89ffb70b950677c863746951ac6696c81a20570bef4e7"
+    },
+    {
+      "path": "bench/validate_full_port_graph_v4.py",
+      "bytes": 4040,
+      "sha256": "2541c28d19b8518fdb2cfb3f2ffb709b0795b31b6a9ebd0b7108b0b07c623e36"
+    },
+    {
+      "path": "bench/profile_main_full_port_v4.py",
+      "bytes": 2569,
+      "sha256": "edd17856732a27bc71ab57b986d72ed6f454b4e1d745040f1e60486d724a063b"
+    }
+  ],
+  "patch_sha256": "ddf7818bbfbcf0c46a79c2183369a3bbe2560569819baa76dc0e6c4995d40449",
+  "verification": "Actual git apply in a fresh task-owned directory, then byte equality for every file",
+  "archive": {
+    "path": "patches/dynamic-full-port-v4-sources.tar.gz",
+    "bytes": 11152363,
+    "sha256": "8a24c4a8355491e0b5b680b5c4f954816fef12b4435744d6ecdef02e3e4f8c49"
+  }
+}

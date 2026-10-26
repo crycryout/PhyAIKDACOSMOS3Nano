@@ -1,0 +1,59 @@
+{
+  "official_revision": "75403624f9c8858f347f624e3b032553fa756ac2",
+  "candidate": "solution/candidate-full-port-v3.py",
+  "candidate_sha256": "daa4b9e64727c3e587da9e5e162cd3ba5324060f5d71a0a5bdde05f03d15b5d0",
+  "main_cases": [
+    "len31_17",
+    "len65_97",
+    "len128_129",
+    "len257_7"
+  ],
+  "shape_cases": [
+    "video320x512",
+    "video17frames",
+    "action16"
+  ],
+  "main_pairs_per_process_window": 20,
+  "shape_pairs_per_process_window": 21,
+  "formal_windows": [
+    0,
+    1
+  ],
+  "window_independence": "Separate tools/thor.py invocations and fresh model processes for window0 and window1",
+  "calibration": "4 official A/A pairs each process window; abs median signed drift <=3%",
+  "order": "Adjacent AB/BA by (window_index + pair_index) % 2; every row retained",
+  "warmup": "2 complete untimed requests per mode and measured shape",
+  "condition": "Cold UND: clear runner and condition cache before every timed request; different positive/negative CFG contents",
+  "phase_counts": {
+    "vae_encode": 1,
+    "engine_step": 1,
+    "condition_encode": 2,
+    "denoiser": 8
+  },
+  "quality": "finite BF16 output, correct shape and raw BF16 bytes exactly equal to fresh independent official oracle",
+  "boundary": "GPU pixels -> online VAE -> original engine.step -> UND -> 8 GEN -> action head -> ready GPU action sync",
+  "excluded": [
+    "model load",
+    "tokenization",
+    "CPU image preprocessing",
+    "optional video decode",
+    "robot postprocessing"
+  ],
+  "dtype": "BF16",
+  "batch": 1,
+  "cuda_graph": false,
+  "steps": 4,
+  "guidance_scale": 3,
+  "flow_shift": 5,
+  "karras": false,
+  "primary_statistic": "median over pair-wise 100*(1-candidate_ms/official_ms), separately per window and per case",
+  "secondary_statistics": [
+    "ratio of medians",
+    "ratio of total time",
+    "per-case summaries"
+  ],
+  "no_mixed_workload_headline": true,
+  "no_profile_timings_in_speedup": true,
+  "synthetic_fixture_limitation": "Varied deterministic token IDs and pixels; no language or robot rollout quality claim",
+  "timing_harness": "bench/paired_full_port_v4.py"
+}

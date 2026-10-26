@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+snapshot/cache/
+snapshot/results/
+snapshot/scratch/
+*.so
+*.cubin
+*.fatbin
+.env

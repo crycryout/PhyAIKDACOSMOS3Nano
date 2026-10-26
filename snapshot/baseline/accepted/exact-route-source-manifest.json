@@ -1,0 +1,51 @@
+{
+  "official_commit": "75403624f9c8858f347f624e3b032553fa756ac2",
+  "route": "candidate-v11 plus attention-v12",
+  "patch_root": "task directory",
+  "sources": {
+    "solution/optimized_route.py": {
+      "sha256": "db7a6ec161e9375fc9bdafc25d6f6333aaf654fadbc5081b6cb15b204f5dbbbd",
+      "bytes": 1942
+    },
+    "solution/EXACT-BF16-ROUTE.md": {
+      "sha256": "a1d02d03960ac98d8f7504c977c7d1bdaedc9e7faa433c0e1b0b66c01b1bd9cb",
+      "bytes": 2236
+    },
+    "solution/candidate-v11.py": {
+      "sha256": "085b3468dceb37503061dcbb35adfd30340c5af877bb6d677a9eae5d263165b4",
+      "bytes": 3361
+    },
+    "solution/candidate-v10.py": {
+      "sha256": "121fac5405c49601055545a41d934a3af286a83becaadaf093711e01697e6f71",
+      "bytes": 2147
+    },
+    "solution/candidate-v8.py": {
+      "sha256": "9327bc171b19bcb250792904aceb2d872838eca01c420530aef4e59a55fbcc60",
+      "bytes": 2140
+    },
+    "solution/candidate.py": {
+      "sha256": "58b6f57b574e4a42ec9f8b966830cde492587d896d45c8184c207c9a05c82dac",
+      "bytes": 1317
+    },
+    "solution/conditioning_cosmos3.py": {
+      "sha256": "02378e5b8040197a9b35c0942994c184d6a251a4337506248c9be3ee64652b89",
+      "bytes": 883
+    },
+    "solution/rounded_add_rmsnorm_v1.py": {
+      "sha256": "dbd55163445a689a78b5285518f5d6b06671ab8e10d4d734ae14272a50c526a8",
+      "bytes": 15961
+    },
+    "solution/cutlass_kv64_rounded_p_v12.cu": {
+      "sha256": "3e731f325c3cf5beb8c451b1f82936c0a29aa347b46c35f50133f82ed79db238",
+      "bytes": 3950
+    },
+    "solution/cutlass_rounded_p_v12/fmha_cutlass_sm100.cuh": {
+      "sha256": "7c0ebeea7c05cf441d62a8e7bc85d933c94c0eb86fde4082f898ae24b913da2d",
+      "bytes": 8968
+    },
+    "solution/cutlass_rounded_p_v12/rounded_mainloop.hpp": {
+      "sha256": "35cdffb290984adc63cb60769b6db3ef12274a5e98dc713baf38c7c578248097",
+      "bytes": 46736
+    }
+  }
+}

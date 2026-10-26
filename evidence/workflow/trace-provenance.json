@@ -1,0 +1,24 @@
+{
+  "trace_id": "wf-20261023T191907391908Z-63abb6795e",
+  "source_sha256": "ba9e79298446b88848588a3a04445ef95bf8a0d3e7b107afdfbb868cc49906d6",
+  "export_sha256": "084d1ba52d7b879899b14d99dc8f392a6b2342f3c96e258156cdd2fb464eb54a",
+  "events": 1141,
+  "counts": {
+    "workflow.start": 1,
+    "workflow.read": 238,
+    "workflow.command.start": 386,
+    "workflow.command.finish": 386,
+    "repair": 2,
+    "workflow.repair": 11,
+    "workflow.decision": 19,
+    "workflow.observation": 12,
+    "workflow.gate": 5,
+    "workflow.artifact": 72,
+    "workflow.rejection": 6,
+    "workflow.handoff": 1,
+    "workflow.hypothesis": 1,
+    "workflow.finish": 1
+  },
+  "transformation": "Historical local paths replaced with documented placeholders; original hashes and numeric values retained. Export hash differs from original trace hash.",
+  "coverage": "Explicit tool events only; declared and failed reads remain classified. See workflow.handoff for the disclosed bypass."
+}

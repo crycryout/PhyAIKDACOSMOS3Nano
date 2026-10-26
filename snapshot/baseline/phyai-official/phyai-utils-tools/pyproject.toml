@@ -1,0 +1,31 @@
+[project]
+name = "phyai-utils-tools"
+dynamic = ["version"]
+description = "phyai — Shared utilities and tools."
+requires-python = ">=3.12"
+dependencies = [
+    "av>=14.0.0",
+    "huggingface-hub",
+    "numpy",
+    "opencv-python-headless",
+    "pillow",
+    "qwen-vl-utils",
+    "torch==2.11.0",
+    "torchvision==0.26.0",
+    "transformers==5.8.1",
+]
+
+[project.optional-dependencies]
+# fastokens accelerates phyai_utils_tools.tokenizer and processor utilities.
+fastokenizer = ["fastokens>=0.2.0"]
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+raw-options = { root = "..", fallback_version = "0.1.0" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/phyai_utils_tools"]

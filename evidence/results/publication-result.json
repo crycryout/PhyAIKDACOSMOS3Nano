@@ -1,0 +1,15 @@
+{
+  "completed": true,
+  "repository": "https://github.com/crycryout/ThorKDAWorkflow",
+  "branch": "codex/cosmos3-bf16-dynamic-full-port-20261024",
+  "commit": "e52fa0107a4966712c4e8a2387150bb2e5b35dba",
+  "remote_commit_matches": true,
+  "worktree_clean": true,
+  "subdir": "examples/cosmos3-nano-bf16-dynamic-full-port-20261024",
+  "manifest_sha256": "708d79153f238604a4a4a502d1c3db7d03e21b1a417a54efa2205777e6e32bdf",
+  "main_trace_sha256": "ba9e79298446b88848588a3a04445ef95bf8a0d3e7b107afdfbb868cc49906d6",
+  "report_url": "https://github.com/crycryout/ThorKDAWorkflow/blob/e52fa0107a4966712c4e8a2387150bb2e5b35dba/examples/cosmos3-nano-bf16-dynamic-full-port-20261024/reports/DYNAMIC-FULL-PORT.md",
+  "chronology_url": "https://github.com/crycryout/ThorKDAWorkflow/blob/e52fa0107a4966712c4e8a2387150bb2e5b35dba/examples/cosmos3-nano-bf16-dynamic-full-port-20261024/reports/WORKFLOW-CHRONOLOGY.md",
+  "read_provenance_url": "https://github.com/crycryout/ThorKDAWorkflow/blob/e52fa0107a4966712c4e8a2387150bb2e5b35dba/examples/cosmos3-nano-bf16-dynamic-full-port-20261024/reports/READ-PROVENANCE.md",
+  "directory_url": "https://github.com/crycryout/ThorKDAWorkflow/tree/e52fa0107a4966712c4e8a2387150bb2e5b35dba/examples/cosmos3-nano-bf16-dynamic-full-port-20261024"
+}

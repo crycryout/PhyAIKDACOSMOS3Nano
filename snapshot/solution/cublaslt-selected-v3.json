@@ -1,0 +1,71 @@
+{
+  "source_result": "/home/renjie/thor-kda-workflow-20261008/tasks/cosmos3-nano-bf16-round2-30pct-20261021/results/cublaslt-configs-screen-v3/model/configs-screen.json",
+  "source_result_sha256": "674edb94dfdd28b4fadfd76988968c608bfe2eb865b52fbe77f5e88a83be1ac7",
+  "screen_only": true,
+  "configurations": {
+    "cross_attention_qkv_proj": {
+      "attrs": {
+        "0": 66,
+        "1": 509,
+        "2": 1,
+        "3": 0,
+        "4": 1,
+        "5": 1,
+        "6": 35,
+        "7": 0,
+        "8": 5
+      },
+      "workspace_bytes": 0,
+      "median_ms": 1.1766400337219238,
+      "ratio_to_torch": 0.7495057207456048
+    },
+    "cross_attention_to_out": {
+      "attrs": {
+        "0": 66,
+        "1": 433,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 35,
+        "7": 0,
+        "8": 3
+      },
+      "workspace_bytes": 0,
+      "median_ms": 0.7593280076980591,
+      "ratio_to_torch": 0.7342802567448552
+    },
+    "mlp_down_proj": {
+      "attrs": {
+        "0": 66,
+        "1": 20,
+        "2": 1,
+        "3": 0,
+        "4": 1,
+        "5": 1,
+        "6": 35,
+        "7": 0,
+        "8": 6
+      },
+      "workspace_bytes": 0,
+      "median_ms": 3.04313588142395,
+      "ratio_to_torch": 0.7945823409227581
+    },
+    "mlp_gate_up_proj": {
+      "attrs": {
+        "0": 66,
+        "1": 513,
+        "2": 1,
+        "3": 0,
+        "4": 1,
+        "5": 3,
+        "6": 35,
+        "7": 0,
+        "8": 6
+      },
+      "workspace_bytes": 0,
+      "median_ms": 4.4686079025268555,
+      "ratio_to_torch": 0.8715167600986523
+    }
+  }
+}

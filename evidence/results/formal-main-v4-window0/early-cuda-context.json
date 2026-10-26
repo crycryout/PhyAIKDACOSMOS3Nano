@@ -1,0 +1,19 @@
+{
+  "pid": 1776528,
+  "outside_e2e": true,
+  "model_requests": 0,
+  "gpu_kernels_launched": 0,
+  "started_utc": "2026-10-23T22:07:05.487500+00:00",
+  "foreign_before": [],
+  "initial_environment": {
+    "CUDA_DEVICE_MAX_CONNECTIONS": null,
+    "CUDA_MODULE_LOADING": null
+  },
+  "context_ready_utc": "2026-10-23T22:07:05.941235+00:00",
+  "effective_cuda_environment": {
+    "CUDA_DEVICE_MAX_CONNECTIONS": "8",
+    "CUDA_MODULE_LOADING": "LAZY"
+  },
+  "foreign_after": [],
+  "context_retained": true
+}

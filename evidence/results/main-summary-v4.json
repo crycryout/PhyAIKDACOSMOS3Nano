@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "baseline": "original official PhyAI",
+  "family": "main dynamic language only",
+  "pooled": {
+    "pairs": 40,
+    "official_median_ms": 8647.67395646777,
+    "candidate_median_ms": 5902.820979594253,
+    "paired_median_reduction_pct": 31.391074817343284,
+    "reduction_from_total_time_pct": 31.53113718134335,
+    "reduction_from_medians_pct": 31.740939710389824
+  },
+  "by_case": {
+    "len128_129": {
+      "pairs": 10,
+      "official_median_ms": 8644.519461435266,
+      "candidate_median_ms": 5970.47733142972,
+      "paired_median_reduction_pct": 31.29297282020603,
+      "reduction_from_total_time_pct": 31.153168533244546,
+      "reduction_from_medians_pct": 30.933380877154846
+    },
+    "len257_7": {
+      "pairs": 10,
+      "official_median_ms": 8618.800957454368,
+      "candidate_median_ms": 5922.689181636088,
+      "paired_median_reduction_pct": 31.118730963892876,
+      "reduction_from_total_time_pct": 31.121171602742947,
+      "reduction_from_medians_pct": 31.281750084812256
+    },
+    "len31_17": {
+      "pairs": 10,
+      "official_median_ms": 8664.18160055764,
+      "candidate_median_ms": 5785.0972805172205,
+      "paired_median_reduction_pct": 32.73930394066396,
+      "reduction_from_total_time_pct": 32.15502219072807,
+      "reduction_from_medians_pct": 33.22973193284773
+    },
+    "len65_97": {
+      "pairs": 10,
+      "official_median_ms": 8643.899850547314,
+      "candidate_median_ms": 5896.776161040179,
+      "paired_median_reduction_pct": 31.408233612864144,
+      "reduction_from_total_time_pct": 31.696149532511384,
+      "reduction_from_medians_pct": 31.781068001767654
+    }
+  }
+}

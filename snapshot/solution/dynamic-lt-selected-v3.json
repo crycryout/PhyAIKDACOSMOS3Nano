@@ -1,0 +1,96 @@
+{
+  "status": "frozen_final_requires_complete_gate_and_formal_e2e",
+  "configurations": {
+    "1472": {
+      "cross_attention_qkv_proj": {
+        "shape": [
+          1472,
+          6144,
+          4096
+        ],
+        "b_row": false,
+        "attrs": {
+          "0": 66,
+          "1": 210,
+          "2": 1,
+          "3": 0,
+          "4": 0,
+          "5": 1,
+          "6": 35,
+          "7": 0,
+          "8": 3
+        },
+        "actual_and_changed_input_byte_gate": true,
+        "screen_ratio": 0.7017796643466516,
+        "evidence": "results/lt-screen-v1/screen.json"
+      },
+      "cross_attention_to_out": {
+        "shape": [
+          1472,
+          4096,
+          4096
+        ],
+        "b_row": false,
+        "attrs": {
+          "0": 66,
+          "1": 433,
+          "2": 1,
+          "3": 0,
+          "4": 0,
+          "5": 1,
+          "6": 35,
+          "7": 0,
+          "8": 3
+        },
+        "actual_and_changed_input_byte_gate": true,
+        "screen_ratio": 0.8403999775226131,
+        "evidence": "results/lt-screen-v1/screen.json"
+      },
+      "mlp_gate_up_proj": {
+        "shape": [
+          1472,
+          24576,
+          4096
+        ],
+        "b_row": false,
+        "attrs": {
+          "0": 66,
+          "1": 513,
+          "2": 1,
+          "3": 0,
+          "4": 1,
+          "5": 3,
+          "6": 35,
+          "7": 0,
+          "8": 6
+        },
+        "actual_and_changed_input_byte_gate": true,
+        "screen_ratio": 0.7098773371463474,
+        "evidence": "results/lt-screen-v1/screen.json"
+      },
+      "mlp_down_proj": {
+        "shape": [
+          1472,
+          4096,
+          12288
+        ],
+        "b_row": true,
+        "attrs": {
+          "0": 66,
+          "1": 447,
+          "2": 1,
+          "3": 0,
+          "4": 0,
+          "5": 1,
+          "6": 35,
+          "7": 0,
+          "8": 3
+        },
+        "actual_and_changed_input_byte_gate": true,
+        "screen_ratio": 0.8769284612942942,
+        "evidence": "results/lt-screen-v1/screen.json"
+      }
+    }
+  },
+  "selection": "M1472 four-category bundle: 10.6261% / 8.8311% paired complete-E2E confirmation. M1982 QKV rejected: second-window 0.035% below 1% gate. All M3526 new configs rejected."
+}

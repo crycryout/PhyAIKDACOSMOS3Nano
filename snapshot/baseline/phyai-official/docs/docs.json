@@ -1,0 +1,214 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "PhyAI",
+  "colors": {
+    "primary": "#003399",
+    "light": "#60A5FA",
+    "dark": "#2563EB"
+  },
+  "favicon": "/favicon.png",
+  "navigation": {
+    "languages": [
+      {
+        "language": "en",
+        "default": true,
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "quickstart/setup-your-agent",
+              "quickstart/add-model"
+            ]
+          },
+          {
+            "group": "Models",
+            "pages": [
+              {
+                "group": "PI0",
+                "pages": [
+                  "models/pi0/ws1",
+                  "models/pi0/alignment-benchmark"
+                ]
+              },
+              {
+                "group": "PI0.5",
+                "pages": [
+                  "models/pi05/ws1",
+                  "models/pi05/processors"
+                ]
+              },
+              {
+                "group": "GR00T",
+                "pages": [
+                  "models/gr00t/ws1",
+                  "models/gr00t/n17-accuracy-parity",
+                  "models/gr00t/n17-libero-closed-loop"
+                ]
+              },
+              {
+                "group": "MolmoAct2",
+                "pages": [
+                  "models/molmoact2/inference"
+                ]
+              },
+              {
+                "group": "Cosmos",
+                "pages": [
+                  "models/cosmos/generation",
+                  "models/cosmos/policy",
+                  "models/cosmos/processors"
+                ]
+              },
+              {
+                "group": "Qwen-Image",
+                "pages": [
+                  "models/qwen-image/generation"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Quantization",
+            "pages": [
+              "quantization/overview"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/server-gateway",
+              "deployment/parallel-serving"
+            ]
+          },
+          {
+            "group": "Tools",
+            "pages": [
+              "tools/tensor-dump"
+            ]
+          },
+          {
+            "group": "Developer guide",
+            "pages": [
+              "developer_guide/code-of-conduct"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "zh",
+        "groups": [
+          {
+            "group": "快速开始",
+            "pages": [
+              "zh/index",
+              "zh/quickstart/setup-your-agent",
+              "zh/quickstart/add-model"
+            ]
+          },
+          {
+            "group": "模型",
+            "pages": [
+              {
+                "group": "PI0",
+                "pages": [
+                  "zh/models/pi0/ws1",
+                  "zh/models/pi0/alignment-benchmark"
+                ]
+              },
+              {
+                "group": "PI0.5",
+                "pages": [
+                  "zh/models/pi05/ws1",
+                  "zh/models/pi05/processors"
+                ]
+              },
+              {
+                "group": "GR00T",
+                "pages": [
+                  "zh/models/gr00t/ws1",
+                  "zh/models/gr00t/n17-accuracy-parity",
+                  "zh/models/gr00t/n17-libero-closed-loop"
+                ]
+              },
+              {
+                "group": "MolmoAct2",
+                "pages": [
+                  "zh/models/molmoact2/inference"
+                ]
+              },
+              {
+                "group": "Cosmos",
+                "pages": [
+                  "zh/models/cosmos/generation",
+                  "zh/models/cosmos/policy",
+                  "zh/models/cosmos/processors"
+                ]
+              },
+              {
+                "group": "Qwen-Image",
+                "pages": [
+                  "zh/models/qwen-image/generation"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "量化",
+            "pages": [
+              "zh/quantization/overview"
+            ]
+          },
+          {
+            "group": "部署",
+            "pages": [
+              "zh/deployment/server-gateway",
+              "zh/deployment/parallel-serving"
+            ]
+          },
+          {
+            "group": "工具",
+            "pages": [
+              "zh/tools/tensor-dump"
+            ]
+          },
+          {
+            "group": "开发者指南",
+            "pages": [
+              "zh/developer_guide/code-of-conduct"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
+  "navbar": {
+    "links": [],
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/mingti-org/phyai"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/mingti-org/phyai"
+    }
+  }
+}

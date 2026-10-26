@@ -1,0 +1,5516 @@
+{
+  "complete": true,
+  "exact_gate_passed": true,
+  "backend": "candidate",
+  "cases": [
+    {
+      "event_ms": 10328.7265625,
+      "ready_wall_ms": 10329.06886190176,
+      "host_submit_ms": 10328.976443968713,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "d08720366b467d47f543f73267f241b5bb0b198e1b029495f236baab469e25ce",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 1,
+          "negative_padded": 3,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 2,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "d08720366b467d47f543f73267f241b5bb0b198e1b029495f236baab469e25ce",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "len1_3",
+      "workload": {
+        "name": "len1_3",
+        "positive_padded": 1,
+        "positive_real": 1,
+        "negative_padded": 3,
+        "negative_real": 3,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5217.6181640625,
+      "ready_wall_ms": 5217.693180078641,
+      "host_submit_ms": 5217.566300183535,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "390f7b54aa21e7cab1e2708881f55199148dda281d9589f17b67fdc704cb9b39",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 31,
+          "negative_padded": 17,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "390f7b54aa21e7cab1e2708881f55199148dda281d9589f17b67fdc704cb9b39",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "len31_17",
+      "workload": {
+        "name": "len31_17",
+        "positive_padded": 31,
+        "positive_real": 31,
+        "negative_padded": 17,
+        "negative_real": 17,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5259.43798828125,
+      "ready_wall_ms": 5259.502093074843,
+      "host_submit_ms": 5259.37816593796,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "8fb26b97395eafbcb046e350124335cccb387c6eeffea6b31a0ca61bca7645da",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 63,
+          "negative_padded": 64,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "8fb26b97395eafbcb046e350124335cccb387c6eeffea6b31a0ca61bca7645da",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "len63_64",
+      "workload": {
+        "name": "len63_64",
+        "positive_padded": 63,
+        "positive_real": 63,
+        "negative_padded": 64,
+        "negative_real": 64,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5209.03125,
+      "ready_wall_ms": 5209.096666891128,
+      "host_submit_ms": 5208.984832977876,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "4462eb789b5c291f16385fdf5bc85d71986a39d563873a2fb2e959065d704db3",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 65,
+          "negative_padded": 97,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "4462eb789b5c291f16385fdf5bc85d71986a39d563873a2fb2e959065d704db3",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "len65_97",
+      "workload": {
+        "name": "len65_97",
+        "positive_padded": 65,
+        "positive_real": 65,
+        "negative_padded": 97,
+        "negative_real": 97,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5490.4765625,
+      "ready_wall_ms": 5490.547131048515,
+      "host_submit_ms": 5490.403871051967,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "a32fd529ff789d445a330fde6af8fe750bd5769fcc535c2338c50ac566067fba",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 127,
+          "negative_padded": 13,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "a32fd529ff789d445a330fde6af8fe750bd5769fcc535c2338c50ac566067fba",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "len127_13",
+      "workload": {
+        "name": "len127_13",
+        "positive_padded": 127,
+        "positive_real": 127,
+        "negative_padded": 13,
+        "negative_real": 13,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5206.94091796875,
+      "ready_wall_ms": 5207.006326178089,
+      "host_submit_ms": 5206.907612038776,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "24dd3161e6f9f200b64881f4ff3d5967db84410e9d4bb69e852d7b3d79512bca",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 128,
+          "negative_padded": 129,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "24dd3161e6f9f200b64881f4ff3d5967db84410e9d4bb69e852d7b3d79512bca",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "len128_129",
+      "workload": {
+        "name": "len128_129",
+        "positive_padded": 128,
+        "positive_real": 128,
+        "negative_padded": 129,
+        "negative_real": 129,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5528.3740234375,
+      "ready_wall_ms": 5528.444265946746,
+      "host_submit_ms": 5528.318978147581,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "793a9c0eb1147095194ac04e3ecd502ff2d1198e34180af42764844da29e962c",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 257,
+          "negative_padded": 7,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "793a9c0eb1147095194ac04e3ecd502ff2d1198e34180af42764844da29e962c",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "len257_7",
+      "workload": {
+        "name": "len257_7",
+        "positive_padded": 257,
+        "positive_real": 257,
+        "negative_padded": 7,
+        "negative_real": 7,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5332.1259765625,
+      "ready_wall_ms": 5332.193034002557,
+      "host_submit_ms": 5332.070737145841,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "42ae3f780707a4ce38fe1882b8ef623edffebe9fcc5607580fbc83e1411dd3fc",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 96,
+          "negative_padded": 64,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "42ae3f780707a4ce38fe1882b8ef623edffebe9fcc5607580fbc83e1411dd3fc",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "padded96_real31",
+      "workload": {
+        "name": "padded96_real31",
+        "positive_padded": 96,
+        "positive_real": 31,
+        "negative_padded": 64,
+        "negative_real": 17,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5312.67431640625,
+      "ready_wall_ms": 5312.743752961978,
+      "host_submit_ms": 5312.614251859486,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "7993358ba2fa959f2dc5215b0e35988147d92441cb41bd44107349a98651b58d",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 31,
+          "negative_padded": 17,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_hits": 288
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "7993358ba2fa959f2dc5215b0e35988147d92441cb41bd44107349a98651b58d",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "same_shape_changed_ids",
+      "workload": {
+        "name": "same_shape_changed_ids",
+        "positive_padded": 31,
+        "positive_real": 31,
+        "negative_padded": 17,
+        "negative_real": 17,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5271.32763671875,
+      "ready_wall_ms": 5271.395474905148,
+      "host_submit_ms": 5271.29248296842,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "7071011bf03ce618753ec55e2bdd0be7d682433e973ad4ef62e4856660f9303e",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 96,
+          "negative_padded": 64,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "7071011bf03ce618753ec55e2bdd0be7d682433e973ad4ef62e4856660f9303e",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "same_shape_changed_mask",
+      "workload": {
+        "name": "same_shape_changed_mask",
+        "positive_padded": 96,
+        "positive_real": 47,
+        "negative_padded": 64,
+        "negative_real": 29,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5336.3896484375,
+      "ready_wall_ms": 5336.458445060998,
+      "host_submit_ms": 5336.349684977904,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "390f7b54aa21e7cab1e2708881f55199148dda281d9589f17b67fdc704cb9b39",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 31,
+          "negative_padded": 17,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_hits": 288
+          },
+          "lt_plan_entries": 2,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "390f7b54aa21e7cab1e2708881f55199148dda281d9589f17b67fdc704cb9b39",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "return_len31_17",
+      "workload": {
+        "name": "return_len31_17",
+        "positive_padded": 31,
+        "positive_real": 31,
+        "negative_padded": 17,
+        "negative_real": 17,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5126.5673828125,
+      "ready_wall_ms": 5126.642206916586,
+      "host_submit_ms": 5126.534261042252,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "4462eb789b5c291f16385fdf5bc85d71986a39d563873a2fb2e959065d704db3",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 65,
+          "negative_padded": 97,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 4,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "4462eb789b5c291f16385fdf5bc85d71986a39d563873a2fb2e959065d704db3",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "len65_nondefault_stream",
+      "workload": {
+        "name": "len65_nondefault_stream",
+        "positive_padded": 65,
+        "positive_real": 65,
+        "negative_padded": 97,
+        "negative_real": 97,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "nondefault",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 2188.7548828125,
+      "ready_wall_ms": 2188.7956478167325,
+      "host_submit_ms": 2188.6835638433695,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "35bc66d5e8f0f3f0c42ecbd78004604fb37f6f527d42eaa17a6f47b2b7a85f80",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 33,
+          "negative_padded": 18,
+          "video_shape": [
+            9,
+            20,
+            32
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 8,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {
+            "plan_miss": 4,
+            "dispatch": 1152,
+            "M=1472/cross_attention_qkv_proj": 288,
+            "M=1472/cross_attention_to_out": 288,
+            "M=1472/mlp_gate_up_proj": 288,
+            "M=1472/mlp_down_proj": 288
+          },
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "35bc66d5e8f0f3f0c42ecbd78004604fb37f6f527d42eaa17a6f47b2b7a85f80",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "video320x512",
+      "workload": {
+        "name": "video320x512",
+        "positive_padded": 33,
+        "positive_real": 33,
+        "negative_padded": 18,
+        "negative_real": 18,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          9,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 2988.067626953125,
+      "ready_wall_ms": 2988.111892947927,
+      "host_submit_ms": 2987.9642059095204,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "46baa1e9fdccb30120ac75244e7f5dcb2be65c7e4fc4cffab8585fa22459bfb9",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 61,
+          "negative_padded": 23,
+          "video_shape": [
+            5,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 8,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {
+            "frozen_fallback": 1152
+          },
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "46baa1e9fdccb30120ac75244e7f5dcb2be65c7e4fc4cffab8585fa22459bfb9",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "video17frames",
+      "workload": {
+        "name": "video17frames",
+        "positive_padded": 61,
+        "positive_real": 61,
+        "negative_padded": 23,
+        "negative_real": 23,
+        "same_cfg": false,
+        "frames": 17,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          5,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5528.990234375,
+      "ready_wall_ms": 5529.060757020488,
+      "host_submit_ms": 5528.941533062607,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        16,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "05140566f7dbd1db01324ae34241524b48d0eaa3696d7427783dbecae95d8bad",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 0,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 65,
+          "negative_padded": 17,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 16,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 8,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {
+            "frozen_fallback": 1152
+          },
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "05140566f7dbd1db01324ae34241524b48d0eaa3696d7427783dbecae95d8bad",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "action16",
+      "workload": {
+        "name": "action16",
+        "positive_padded": 65,
+        "positive_real": 65,
+        "negative_padded": 17,
+        "negative_real": 17,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 16,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 2222.514892578125,
+      "ready_wall_ms": 2222.548243124038,
+      "host_submit_ms": 2222.4630750715733,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 1,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "a5b42ec1f91a7383568676580c4a5b14d678644ab147bf0767bbf8c0c9afa35d",
+      "optimization": {
+        "physical_gen_gemms": 576,
+        "reused_gen_gemms": 576,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 576,
+        "pairs": [
+          {
+            "hits": 144,
+            "misses": 0,
+            "comparisons": 144
+          },
+          {
+            "hits": 144,
+            "misses": 0,
+            "comparisons": 144
+          },
+          {
+            "hits": 144,
+            "misses": 0,
+            "comparisons": 144
+          },
+          {
+            "hits": 144,
+            "misses": 0,
+            "comparisons": 144
+          }
+        ],
+        "peak_retained_tensor_bytes": 7820918784,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 144,
+        "reused_gen_attention": 144,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 432,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 4,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 1008,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 1008,
+          "rows": [
+            {
+              "proven": true,
+              "reason": "identical_live_inputs_and_route"
+            },
+            {
+              "proven": true,
+              "reason": "identical_live_inputs_and_route"
+            },
+            {
+              "proven": true,
+              "reason": "identical_live_inputs_and_route"
+            },
+            {
+              "proven": true,
+              "reason": "identical_live_inputs_and_route"
+            }
+          ],
+          "all_nonlinear_operations_executed": false
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 568,
+              "physical": 284,
+              "reused": 284,
+              "fallback": 0,
+              "audit_recomputations": 284
+            },
+            "input_rms": {
+              "logical": 8,
+              "physical": 4,
+              "reused": 4,
+              "fallback": 0,
+              "audit_recomputations": 4
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 288,
+              "physical": 144,
+              "reused": 144,
+              "fallback": 0,
+              "audit_recomputations": 144
+            },
+            "k_rms": {
+              "logical": 288,
+              "physical": 144,
+              "reused": 144,
+              "fallback": 0,
+              "audit_recomputations": 144
+            },
+            "silu": {
+              "logical": 288,
+              "physical": 144,
+              "reused": 144,
+              "fallback": 0,
+              "audit_recomputations": 144
+            },
+            "attention_prepare": {
+              "logical": 288,
+              "physical": 144,
+              "reused": 144,
+              "fallback": 0,
+              "audit_recomputations": 144
+            }
+          },
+          "peak_accounted_reference_bytes": 9784942592,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": true,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 879,
+          "audit": true,
+          "audited_signatures": 8,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": true
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 288,
+          "physical": 144,
+          "reused": 144,
+          "audit_recomputations": 144,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 144,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 7,
+          "refresh_calls": 1,
+          "audited_fast_calls": 7,
+          "tensors_checked_each_forward": true,
+          "route_guard_fields_preserved": true
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 47,
+          "negative_padded": 47,
+          "video_shape": [
+            9,
+            20,
+            32
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 1,
+            "evictions": 1,
+            "plan_hits": 143
+          },
+          "lt_plan_entries": 8,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": true,
+          "identical_text_inputs": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {
+            "dispatch": 576,
+            "M=1472/cross_attention_qkv_proj": 144,
+            "M=1472/cross_attention_to_out": 144,
+            "M=1472/mlp_gate_up_proj": 144,
+            "M=1472/mlp_down_proj": 144
+          },
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "a5b42ec1f91a7383568676580c4a5b14d678644ab147bf0767bbf8c0c9afa35d",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "same_cfg_dynamic_query",
+      "workload": {
+        "name": "same_cfg_dynamic_query",
+        "positive_padded": 47,
+        "positive_real": 47,
+        "negative_padded": 47,
+        "negative_real": 47,
+        "same_cfg": true,
+        "frames": 33,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          9,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 1723.5262451171875,
+      "ready_wall_ms": 1723.547985078767,
+      "host_submit_ms": 1723.2680371962488,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        2,
+        8,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "c87c842486808c82e51fa3b2e9bed7a31b4494b446d690203835fdbecb9accf2",
+      "optimization": {
+        "dynamic": {
+          "route": "official",
+          "reason": "official_batch_or_rank"
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "c87c842486808c82e51fa3b2e9bed7a31b4494b446d690203835fdbecb9accf2",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "batch2_official_fallback",
+      "workload": {
+        "name": "batch2_official_fallback",
+        "positive_padded": 11,
+        "positive_real": 11,
+        "negative_padded": 7,
+        "negative_real": 7,
+        "same_cfg": false,
+        "frames": 5,
+        "height": 128,
+        "width": 192,
+        "video_shape": [
+          2,
+          8,
+          12
+        ],
+        "batch": 2,
+        "action_chunk": 8,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5172.32958984375,
+      "ready_wall_ms": 5172.399122035131,
+      "host_submit_ms": 5172.28945507668,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "1de7566a9517e249e9015d3aa17886f88e22b57e88ac543415c7f55804fd105e",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 879,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 512,
+          "negative_padded": 33,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 8,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "1de7566a9517e249e9015d3aa17886f88e22b57e88ac543415c7f55804fd105e",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "long512",
+      "workload": {
+        "name": "long512",
+        "positive_padded": 512,
+        "positive_real": 512,
+        "negative_padded": 33,
+        "negative_real": 33,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 5037.3017578125,
+      "ready_wall_ms": 5037.368041928858,
+      "host_submit_ms": 5037.242799066007,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "1de7566a9517e249e9015d3aa17886f88e22b57e88ac543415c7f55804fd105e",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 879,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 512,
+          "negative_padded": 33,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_hits": 288
+          },
+          "lt_plan_entries": 8,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "1de7566a9517e249e9015d3aa17886f88e22b57e88ac543415c7f55804fd105e",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "repeat_long512_warm",
+      "workload": {
+        "name": "repeat_long512_warm",
+        "positive_padded": 512,
+        "positive_real": 512,
+        "negative_padded": 33,
+        "negative_real": 33,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 6088.634765625,
+      "ready_wall_ms": 6088.710153941065,
+      "host_submit_ms": 6088.586346944794,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "4796344a6e742d57f52ee52d7aeef263d0bd46a46a3f43138a8253d30cf026a0",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 879,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 67,
+          "negative_padded": 19,
+          "video_shape": [
+            9,
+            30,
+            52
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 8,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {},
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {
+            "torch_mm/cross_attention_to_out": 288,
+            "dispatch": 576,
+            "torch_mm/mlp_down_proj": 288
+          },
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "4796344a6e742d57f52ee52d7aeef263d0bd46a46a3f43138a8253d30cf026a0",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "conditioning_frames0_2",
+      "workload": {
+        "name": "conditioning_frames0_2",
+        "positive_padded": 67,
+        "positive_real": 67,
+        "negative_padded": 19,
+        "negative_real": 19,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 480,
+        "width": 832,
+        "video_shape": [
+          9,
+          30,
+          52
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 2201.482666015625,
+      "ready_wall_ms": 2201.5087080653757,
+      "host_submit_ms": 2201.2024640571326,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        16,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "afd1ad6f43aa743f2b1d294d0e5e1a83aec3c386c7fe2ad3c96c12a5c54f88f9",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 879,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 37,
+          "negative_padded": 21,
+          "video_shape": [
+            5,
+            20,
+            32
+          ],
+          "action_chunk": 16,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 8,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {
+            "frozen_fallback": 1152
+          },
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "afd1ad6f43aa743f2b1d294d0e5e1a83aec3c386c7fe2ad3c96c12a5c54f88f9",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "unseen_query_shape",
+      "workload": {
+        "name": "unseen_query_shape",
+        "positive_padded": 37,
+        "positive_real": 37,
+        "negative_padded": 21,
+        "negative_real": 21,
+        "same_cfg": false,
+        "frames": 17,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          5,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 16,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 1935.12060546875,
+      "ready_wall_ms": 1935.1571379229426,
+      "host_submit_ms": 1935.0088308565319,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "7288c3e45e82ed1a83a0f808aaf77f083c1ded4480bddbba9c084499caef134b",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 879,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 47,
+          "negative_padded": 47,
+          "video_shape": [
+            9,
+            20,
+            32
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 1,
+            "evictions": 1,
+            "plan_hits": 287
+          },
+          "lt_plan_entries": 8,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {
+            "dispatch": 1152,
+            "M=1472/cross_attention_qkv_proj": 288,
+            "M=1472/cross_attention_to_out": 288,
+            "M=1472/mlp_gate_up_proj": 288,
+            "M=1472/mlp_down_proj": 288
+          },
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "7288c3e45e82ed1a83a0f808aaf77f083c1ded4480bddbba9c084499caef134b",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "same_length_different_cfg",
+      "workload": {
+        "name": "same_length_different_cfg",
+        "positive_padded": 47,
+        "positive_real": 47,
+        "negative_padded": 47,
+        "negative_real": 47,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          9,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "default",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout"
+      }
+    },
+    {
+      "event_ms": 1994.77587890625,
+      "ready_wall_ms": 1994.8118580505252,
+      "host_submit_ms": 1994.7042830754071,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "condition_encode": 2,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "35bc66d5e8f0f3f0c42ecbd78004604fb37f6f527d42eaa17a6f47b2b7a85f80",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 879,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 33,
+          "negative_padded": 18,
+          "video_shape": [
+            9,
+            20,
+            32
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 4,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {
+            "plan_miss": 4,
+            "dispatch": 1152,
+            "M=1472/cross_attention_qkv_proj": 288,
+            "M=1472/cross_attention_to_out": 288,
+            "M=1472/mlp_gate_up_proj": 288,
+            "M=1472/mlp_down_proj": 288
+          },
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "35bc66d5e8f0f3f0c42ecbd78004604fb37f6f527d42eaa17a6f47b2b7a85f80",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "dynamic_lt_stream_1",
+      "workload": {
+        "name": "video320x512",
+        "positive_padded": 33,
+        "positive_real": 33,
+        "negative_padded": 18,
+        "negative_real": 18,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          9,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "fresh_nondefault_1",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout",
+        "reference_case": "video320x512"
+      }
+    },
+    {
+      "event_ms": 1864.5662841796875,
+      "ready_wall_ms": 1864.6053581032902,
+      "host_submit_ms": 1864.481670083478,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "35bc66d5e8f0f3f0c42ecbd78004604fb37f6f527d42eaa17a6f47b2b7a85f80",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 879,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 33,
+          "negative_padded": 18,
+          "video_shape": [
+            9,
+            20,
+            32
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 8,
+          "lt_workspace_entries": 2,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {
+            "plan_miss": 4,
+            "dispatch": 1152,
+            "M=1472/cross_attention_qkv_proj": 288,
+            "M=1472/cross_attention_to_out": 288,
+            "M=1472/mlp_gate_up_proj": 288,
+            "M=1472/mlp_down_proj": 288
+          },
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "35bc66d5e8f0f3f0c42ecbd78004604fb37f6f527d42eaa17a6f47b2b7a85f80",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "dynamic_lt_stream_2",
+      "workload": {
+        "name": "video320x512",
+        "positive_padded": 33,
+        "positive_real": 33,
+        "negative_padded": 18,
+        "negative_real": 18,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          9,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "fresh_nondefault_2",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout",
+        "reference_case": "video320x512"
+      }
+    },
+    {
+      "event_ms": 1901.7066650390625,
+      "ready_wall_ms": 1901.7696529626846,
+      "host_submit_ms": 1901.4782151207328,
+      "phase_counts": {
+        "vae_encode": 1,
+        "engine_step": 1,
+        "denoiser": 8
+      },
+      "output_shape": [
+        1,
+        32,
+        10
+      ],
+      "output_dtype": "torch.bfloat16",
+      "action_sha256": "35bc66d5e8f0f3f0c42ecbd78004604fb37f6f527d42eaa17a6f47b2b7a85f80",
+      "optimization": {
+        "physical_gen_gemms": 1152,
+        "reused_gen_gemms": 0,
+        "logical_gen_gemms": 1152,
+        "misses": 0,
+        "byte_comparisons": 0,
+        "pairs": [],
+        "peak_retained_tensor_bytes": 0,
+        "remaining_entries": 0,
+        "lifetime": "one cond/uncond pair; no cross-step or cross-request reuse",
+        "physical_gen_attention": 288,
+        "reused_gen_attention": 0,
+        "logical_gen_attention": 288,
+        "attention_misses": 0,
+        "attention_tensor_byte_comparisons": 0,
+        "remaining_attention_entries": 0,
+        "input_proof": {
+          "proved_pairs": 0,
+          "fallback_pairs": 0,
+          "proved_intermediate_comparisons": 0,
+          "physical_intermediate_comparisons": 0,
+          "audited_intermediate_comparisons": 0,
+          "rows": [],
+          "all_nonlinear_operations_executed": true
+        },
+        "pure_operator_reuse": {
+          "by_kind": {
+            "rounded_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "input_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "post_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "q_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "k_rms": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "silu": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            },
+            "attention_prepare": {
+              "logical": 0,
+              "physical": 0,
+              "reused": 0,
+              "fallback": 0,
+              "audit_recomputations": 0
+            }
+          },
+          "peak_accounted_reference_bytes": 0,
+          "cap_bytes": 25769803776,
+          "remaining_entries_before_request_cleanup": 0,
+          "audit": true,
+          "physical_nonlinear_kernels_may_be_reused": false,
+          "lifetime": "one CFG pair; no layer, branch, step or request output cache",
+          "remaining_entries": 0,
+          "enabled": false,
+          "counters_cover_only_enabled_memo_wrappers": true,
+          "counter_scope": "disabled CSE wrappers; zeros are not physical operator counts"
+        },
+        "route_signature_cache": {
+          "available": true,
+          "entries": 879,
+          "audit": true,
+          "audited_signatures": 0,
+          "registry_mutation_falls_back": true,
+          "tensor_checks_per_forward": false
+        },
+        "preparation_dispatch": {
+          "runtime_cuda_graph": false,
+          "counted_route": "runner Fusion.forward; accepted parent enables fusion without Graph",
+          "logical": 0,
+          "physical": 0,
+          "reused": 0,
+          "audit_recomputations": 0,
+          "eager_helper_intercepted": false,
+          "all_module_forwards_execute": true,
+          "counter_scope": "disabled preparation CSE wrapper; direct fusion still executes"
+        },
+        "physical_attention_kernel": {
+          "baseline": "cutlass_compact_v13",
+          "candidate": "cutlass_compact_v40",
+          "baseline_dispatches": 0,
+          "candidate_dispatches": 288,
+          "active_pv_columns": 144,
+          "abi_v_columns": 192,
+          "all_module_forwards_execute": true,
+          "correction_numerator_tile_columns": 32,
+          "correction_denominator_tile_columns": 16
+        },
+        "native_signature": {
+          "fast_calls": 0,
+          "refresh_calls": 0,
+          "audited_fast_calls": 0,
+          "tensors_checked_each_forward": false,
+          "route_guard_fields_preserved": false
+        },
+        "dynamic": {
+          "route": "optimized_eager",
+          "text_padded": 33,
+          "negative_padded": 18,
+          "video_shape": [
+            9,
+            20,
+            32
+          ],
+          "action_chunk": 32,
+          "plan_entries": 4,
+          "plan_limit": 4,
+          "plan_stats": {
+            "plan_misses": 2,
+            "evictions": 2,
+            "plan_hits": 286
+          },
+          "lt_plan_entries": 4,
+          "lt_workspace_entries": 1,
+          "pair_state_cleared": true
+        },
+        "cfg_memo_policy": {
+          "enabled": false,
+          "identical_text_inputs": false,
+          "reason": "different CFG text inputs: compute both branches; no speculative operator memo",
+          "full_branch_execution": true
+        },
+        "dynamic_lt_extension": {
+          "counters": {
+            "plan_miss": 4,
+            "dispatch": 1152,
+            "M=1472/cross_attention_qkv_proj": 288,
+            "M=1472/cross_attention_to_out": 288,
+            "M=1472/mlp_gate_up_proj": 288,
+            "M=1472/mlp_down_proj": 288
+          },
+          "accepted_M": [
+            1472
+          ],
+          "unchanged_original_M": 3542,
+          "unknown_shape_fallback": "inherited dynamic torch.mm",
+          "same_cfg_pair_local_reuse_preserved": true,
+          "no_cross_request_values": true
+        },
+        "main_gemm_extension": {
+          "enabled": true,
+          "counters": {},
+          "supported_M": 3542,
+          "categories": [
+            "cross_attention_to_out",
+            "mlp_down_proj"
+          ],
+          "output_projection_weight_row_major": true,
+          "down_projection_unchanged_packed_layout": true,
+          "additional_pack_bytes": 1207959552,
+          "additional_packed_weights": 36,
+          "all_other_shapes": "inherited V3 dynamic fallback",
+          "no_cross_request_outputs": true
+        }
+      },
+      "byte_equal": true,
+      "reference_sha256": "35bc66d5e8f0f3f0c42ecbd78004604fb37f6f527d42eaa17a6f47b2b7a85f80",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "case": "dynamic_lt_stream_3",
+      "workload": {
+        "name": "video320x512",
+        "positive_padded": 33,
+        "positive_real": 33,
+        "negative_padded": 18,
+        "negative_real": 18,
+        "same_cfg": false,
+        "frames": 33,
+        "height": 320,
+        "width": 512,
+        "video_shape": [
+          9,
+          20,
+          32
+        ],
+        "batch": 1,
+        "action_chunk": 32,
+        "stream": "fresh_nondefault_3",
+        "fixture": "deterministic varied synthetic token IDs; not a language/task rollout",
+        "reference_case": "video320x512"
+      }
+    }
+  ],
+  "errors": []
+}

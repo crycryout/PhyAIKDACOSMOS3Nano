@@ -1,0 +1,12 @@
+2026-10-24 06:24:28,583 INFO phyai.utils.env_setup: env setup applied 4 var(s): TRTLLM_ENABLE_PDL=1, CUTE_DSL_LOG_LEVEL=30, CUTE_DSL_LOG_TO_CONSOLE=1, OMP_NUM_THREADS=1
+2026-10-24 06:24:28,602 INFO phyai.engine: init stage=torch_setup elapsed=0.00s used=0.00 GiB free=9.95 GiB
+2026-10-24 06:24:28,709 INFO phyai.engine: init stage=cuda elapsed=0.11s used=0.25 GiB free=9.70 GiB
+2026-10-24 06:24:28,710 INFO phyai.engine: init stage=dist elapsed=0.00s used=0.00 GiB free=9.70 GiB
+2026-10-24 06:24:28,710 INFO phyai.engine: init stage=mesh elapsed=0.00s used=0.00 GiB free=9.70 GiB
+2026-10-24 06:24:28,723 INFO phyai.engine: init stage=kernel elapsed=0.01s used=0.00 GiB free=9.70 GiB
+2026-10-24 06:24:48,739 INFO phyai.weights.loader: load_pretrained(transformer): loaded=808 | missing=0 | optional_missing=0 | unexpected=0 | casts=0
+2026-10-24 06:24:48,745 INFO phyai.models.cosmos3.scheduler_cosmos3_policy: Cosmos3 policy scheduler ready (UniPC, tp=1, cfg=1).
+2026-10-24 06:24:48,745 INFO phyai.models.cosmos3.main_cosmos3_policy: Cosmos3 policy plugin ready (decode_video=False, flow_shift=5.0, use_karras_sigmas=False).
+2026-10-24 06:24:48,746 INFO phyai.engine: init stage=plugin_setup elapsed=20.02s used=1.05 GiB free=8.64 GiB
+2026-10-24 06:24:48,746 INFO phyai.engine: Engine ready (plugin=cosmos3_policy). total=20.16s free=8.64 GiB
+2026-10-24 06:24:49,769 INFO phyai.weights.loader: load_pretrained(vae): loaded=196 | missing=0 | optional_missing=0 | unexpected=0 | casts=0

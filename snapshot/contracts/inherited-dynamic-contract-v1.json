@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "task": "COSMOS3 Nano BF16 dynamic input migration",
+  "parent": "R3-v11",
+  "official_revision": "75403624f9c8858f347f624e3b032553fa756ac2",
+  "boundary": "GPU observation pixels -> online causal VAE conditioning -> original engine.step -> ready GPU BF16 actions",
+  "steps": 4,
+  "cfg_branches": 2,
+  "guidance_scale": 3,
+  "flow_shift": 5,
+  "use_karras_sigmas": false,
+  "gate": "finite BF16 action bytes must exactly equal independent original official archive",
+  "dynamic_fields": [
+    "positive and negative token storage lengths independently",
+    "right-padded effective token length and content",
+    "video grid",
+    "action length",
+    "request stream"
+  ],
+  "preserve_official_semantics": [
+    "B>1 requires equal real text length within each branch",
+    "text_mask supplies effective prefix length; no arbitrary-hole reinterpretation",
+    "condition runner reset per request; content-aware bounded original condition cache",
+    "No cross-step or cross-request operator CSE",
+    "Batched/Graph/unverified contexts use original PhyAI fallback"
+  ],
+  "attention_plans": {
+    "limit": 4,
+    "workspace_each_bytes": 134217728,
+    "keys": [
+      "Q/K/V shapes",
+      "strides",
+      "dtype",
+      "device",
+      "stream"
+    ],
+    "eviction": "synchronize last-use event before releasing retired plan"
+  },
+  "numerical_contract_change": false,
+  "performance_target": "Re-measure dynamic full-request E2E; static same-CFG speedups do not establish dynamic 30% gains"
+}

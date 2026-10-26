@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "archives": [
+    {
+      "source": "results/profile-main-full-port-v4/candidate-dynamic.trace.json",
+      "archive": "results/profile-main-full-port-v4/candidate-dynamic.trace.json.gz",
+      "source_sha256": "470e382fb36aeb5716a47dee3d7a15a1f7730bcb816b480f2c3fa2625c0a1747",
+      "compressed_sha256": "7591d808bcb5136aedbc117e44367dd22e09063546e91daa3f306a8b0b6e5b3e",
+      "original_bytes": 163324261,
+      "compressed_bytes": 14259287,
+      "decompressed_sha256_matches": true
+    }
+  ]
+}

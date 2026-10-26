@@ -1,0 +1,79 @@
+{
+  "configurations": {
+    "cross_attention_qkv_proj": {
+      "b_row": 1,
+      "swapped": 0,
+      "attrs": {
+        "0": 66,
+        "1": 479,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 35,
+        "7": 0,
+        "8": 3
+      },
+      "median_ms": 3.2145280838012695,
+      "ratio_to_selected_pair": 1.187161054568415,
+      "ratio_to_frozen_pair": 0.9775403730815092
+    },
+    "cross_attention_to_out": {
+      "b_row": 1,
+      "swapped": 1,
+      "attrs": {
+        "0": 66,
+        "1": 509,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 35,
+        "7": 0,
+        "8": 3
+      },
+      "median_ms": 2.262495994567871,
+      "ratio_to_selected_pair": 1.3601701016007188,
+      "ratio_to_frozen_pair": 1.0602215856897734
+    },
+    "mlp_down_proj": {
+      "b_row": 1,
+      "swapped": 0,
+      "attrs": {
+        "0": 66,
+        "1": 513,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 35,
+        "7": 0,
+        "8": 3
+      },
+      "median_ms": 9.598655700683594,
+      "ratio_to_selected_pair": 1.3806978416496405,
+      "ratio_to_frozen_pair": 1.122723274232889
+    },
+    "mlp_gate_up_proj": {
+      "b_row": 1,
+      "swapped": 1,
+      "attrs": {
+        "0": 66,
+        "1": 23,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 35,
+        "7": 0,
+        "8": 3
+      },
+      "median_ms": 10.753087997436523,
+      "ratio_to_selected_pair": 0.9088558356515998,
+      "ratio_to_frozen_pair": 0.7934855735397607
+    }
+  },
+  "source": "/home/renjie/thor-kda-workflow-20261008/tasks/cosmos3-nano-bf16-round2-30pct-20261021/results/cfg-batched-gemm-screen-v1/model/cfg-batched-gemm-screen.json",
+  "source_sha256": "23c37bc195c439a7f4a8eab2251b9aaccf4903e12fcb1b805867e34e6f5a15f5",
+  "screen_only": true
+}

@@ -1,0 +1,25 @@
+{
+  "torch": "2.11.0+cu130",
+  "cuda": "13.0",
+  "gpu": "NVIDIA Thor",
+  "capability": [
+    11,
+    0
+  ],
+  "source_revision": "75403624f9c8858f347f624e3b032553fa756ac2",
+  "source_root": "$TASK_ROOT/baseline/phyai-official",
+  "checkpoint": "$THOR_HOME/rjc/cosmos3-bf16-20260917/models/Cosmos3-Nano-Policy-DROID",
+  "dtype": "BF16",
+  "runtime_cuda_graph": false,
+  "pid": 1753965,
+  "boundary": "GPU pixels -> VAE encode -> original engine.step (UND + 4x2 GEN + action head) -> ready GPU action",
+  "excluded": [
+    "checkpoint load",
+    "tokenization",
+    "pixel preprocessing",
+    "optional video decode",
+    "robot postprocessing"
+  ],
+  "operator_replacements": false,
+  "fixed_positive_equals_negative": false
+}

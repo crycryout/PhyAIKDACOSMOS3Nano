@@ -1,0 +1,617 @@
+{
+  "complete": true,
+  "gate_passed": true,
+  "runs": [
+    {
+      "tag": "formal-main-v4-window0",
+      "candidate_rows": 20,
+      "main_extension_dispatch_histogram": {
+        "576": 20
+      },
+      "rows": [
+        {
+          "case": "len31_17",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len65_97",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len128_129",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len257_7",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len31_17",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len65_97",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len128_129",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len257_7",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len31_17",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len65_97",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len128_129",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len257_7",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len31_17",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len65_97",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len128_129",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len257_7",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len31_17",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len65_97",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len128_129",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len257_7",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        }
+      ]
+    },
+    {
+      "tag": "formal-main-v4-window1",
+      "candidate_rows": 20,
+      "main_extension_dispatch_histogram": {
+        "576": 20
+      },
+      "rows": [
+        {
+          "case": "len31_17",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len65_97",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len128_129",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len257_7",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len31_17",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len65_97",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len128_129",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len257_7",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len31_17",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len65_97",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len128_129",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len257_7",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len31_17",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len65_97",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len128_129",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len257_7",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len31_17",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len65_97",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len128_129",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "len257_7",
+          "dispatch": 576,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        }
+      ]
+    },
+    {
+      "tag": "formal-shapes-v4-window0",
+      "candidate_rows": 21,
+      "main_extension_dispatch_histogram": {
+        "0": 21
+      },
+      "rows": [
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        }
+      ]
+    },
+    {
+      "tag": "formal-shapes-v4-window1",
+      "candidate_rows": 21,
+      "main_extension_dispatch_histogram": {
+        "0": 21
+      },
+      "rows": [
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video320x512",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "video17frames",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        },
+        {
+          "case": "action16",
+          "dispatch": 0,
+          "gemm_wrapper_count": 1152,
+          "logical_gen_gemms": 1152,
+          "physical_gen_attention": 288
+        }
+      ]
+    }
+  ],
+  "interpretation": "CSE disabled-wrapper GEMM counters may be zero; actual physical 1152 launches are verified separately by same-trace correlation, while this audit requires 576 new main routes for M3542 and 0 for other M."
+}
